@@ -1,0 +1,85 @@
+"use client"; // Safe to ignore in a Vite + React SPA, usually a Next.js directive
+
+import { useState } from "react";
+import { Link } from "react-router"; // React Router v7
+import Button from "./Button"; // Your reusable Button component
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false); // Tracks mobile menu toggle
+
+  return (
+    <nav className='w-full px-6 py-4 bg-primary border-b-4 border-background'>
+      <div className='max-w-[1440px] mx-auto flex items-center justify-between'>
+        {/* Logo that links to homepage */}
+        <Link
+          to='/'
+          className='text-[32px] md:text-[44px] font-bold font-cormorant text-black'
+        >
+          Samuel Preston
+        </Link>
+
+        {/* Desktop Nav */}
+        <div className='hidden md:flex items-center gap-10'>
+          <div className='flex items-center gap-6'>
+            {/* Use Link instead of anchor for SPA routing */}
+            <Link
+              to='/about'
+              className='text-[20px] md:text-[24px] font-cormorant text-black'
+            >
+              About Me
+            </Link>
+            <Link
+              to='/projects'
+              className='text-[20px] md:text-[24px] font-cormorant text-black'
+            >
+              Projects
+            </Link>
+          </div>
+
+          {/* CTA Button wrapped in mailto anchor */}
+          <a href='mailto:spreston110@gmail.com'>
+            <Button className='bg-accent border-body text-body hover:bg-body hover:text-accent hover:border-accent text-[24px] md:text-[32px] font-semibold px-4 py-2 rounded-lg'>
+              Let’s Connect
+            </Button>
+          </a>
+        </div>
+
+        {/* Mobile Toggle Button (hamburger icon) */}
+        <div className='md:hidden'>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label='Toggle Menu'
+            className='text-body border-2 border-body rounded px-3 py-1'
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className='md:hidden mt-4 flex flex-col items-center gap-4'>
+          <Link
+            to='/about'
+            className='text-[20px] font-cormorant text-black'
+            onClick={() => setIsOpen(false)} // Close menu after click
+          >
+            About Me
+          </Link>
+          <Link
+            to='/projects'
+            className='text-[20px] font-cormorant text-black'
+            onClick={() => setIsOpen(false)}
+          >
+            Projects
+          </Link>
+          <a href='mailto:spreston110@gmail.com'>
+            <Button className='bg-accent border-body text-body hover:bg-body hover:text-accent hover:border-accent text-[24px] font-semibold px-4 py-2 rounded-lg'>
+              Let’s Connect
+            </Button>
+          </a>
+        </div>
+      )}
+    </nav>
+  );
+}
