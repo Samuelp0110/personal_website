@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import ProfileImage from "../assets/sam-preston.png"; // Adjust path + filename accordingly
+import ProfileImage from "../assets/sam-preston.png";
 
 const HeroSection: FC = () => {
   return (
