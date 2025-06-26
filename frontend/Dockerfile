@@ -9,8 +9,13 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-# Copy the rest of the codebase
-COPY . .
+# Copy source files
+COPY public ./public
+COPY src ./src
+COPY index.html .
+COPY vite.config.ts .
+COPY tsconfig.json .
+
 
 # Build the Vite site (generates a /dist folder)
 RUN npm run build
