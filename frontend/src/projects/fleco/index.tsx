@@ -18,7 +18,7 @@ const FlecoPage = () => {
         image={previewImage}
       />
 
-      {flecoMeta.pdfUrl && <PDFButton url={flecoMeta.pdfUrl} />}
+      <PDFButton slug='fleco' />
     </main>
   );
 };

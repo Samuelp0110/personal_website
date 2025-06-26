@@ -6,6 +6,7 @@ import Projects from "./routes/Projects";
 import NotFound from "./routes/NotFound";
 import Temp from "./routes/Temp";
 import ProjectPageLoader from "./routes/ProjectPageLoader";
+import PDFViewerPage from "./routes/PDFViewerPage";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         path: "/projects/:slug",
         element: <ProjectPageLoader />,
+      },
+      {
+        path: "pdf/:slug", // <-- Add this route
+        element: <PDFViewerPage />,
       },
     ],
   },

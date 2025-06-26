@@ -1,5 +1,6 @@
 import type { FC } from "react";
-import Button from "./Button"; // Your styled Button component
+import Button from "./Button";
+import { Link } from "react-router";
 
 interface ProjectCardProps {
   title: string;
@@ -36,15 +37,11 @@ const ProjectCard: FC<ProjectCardProps> = ({
         <div className='flex-1 flex flex-col gap-4 text-left font-cormorant'>
           <h2 className='text-[32px] font-semibold text-black'>{title}</h2>
           <p className='text-[24px] font-normal text-black'>{description}</p>
-          <a
-            href={link}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
+          <Link to={link}>
             <Button className='bg-secondary text-body border-body hover:bg-body hover:text-accent hover:border-accent text-[32px] font-semibold'>
               Learn More
             </Button>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
