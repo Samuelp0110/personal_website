@@ -1,56 +1,24 @@
-import type { FC } from "react";
 import flecoMeta from "./metadata";
-import previewImage from "../../assets/no_image.jpg"; // ensure this image exists
+import previewImage from "../../assets/no_image.jpg";
+import ProjectHeroBlock from "../../components/projectBlocks/ProjectHeroBlock";
+import TextImageSplit from "../../components/projectBlocks/TextImageSplit";
+import PDFButton from "../../components/projectBlocks/PDFButton";
 
-const FlecoPage: FC = () => {
+const FlecoPage = () => {
   return (
-    <main className='bg-primary w-full px-6 py-24 flex flex-col items-center'>
-      {/* Title and Subtitle */}
-      <section className='max-w-[1000px] w-full flex flex-col items-start gap-6 mb-12'>
-        <h1 className='text-[40px] md:text-[56px] font-cormorant font-bold text-background'>
-          {flecoMeta.title}
-        </h1>
-        <p className='text-[24px] md:text-[28px] text-background font-cormorant'>
-          {flecoMeta.description}
-        </p>
-      </section>
+    <main className='bg-primary w-full flex flex-col items-center mb-12'>
+      <ProjectHeroBlock
+        title={flecoMeta.title}
+        subtitle={flecoMeta.description}
+        image={previewImage}
+      />
 
-      {/* Image */}
-      <section className='max-w-[1000px] w-full mb-12'>
-        <img
-          src={previewImage}
-          alt={`Preview of ${flecoMeta.title}`}
-          className='w-full rounded-2xl object-cover max-h-[500px]'
-        />
-      </section>
+      <TextImageSplit
+        text='Fleco was created to tackle campus waste. We designed it as a sustainable marketplace for students to resell goods rather than trash them.'
+        image={previewImage}
+      />
 
-      {/* Tags (optional) */}
-      <section className='mb-12'>
-        <div className='flex flex-wrap gap-4'>
-          {flecoMeta.tags.map((tag) => (
-            <span
-              key={tag}
-              className='px-3 py-1 bg-secondary text-body text-[16px] rounded-full font-cormorant'
-            >
-              #{tag}
-            </span>
-          ))}
-        </div>
-      </section>
-
-      {/* PDF Link */}
-      {flecoMeta.pdfUrl && (
-        <section className='mb-12'>
-          <a
-            href={flecoMeta.pdfUrl}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='underline text-accent hover:text-body transition-colors duration-300 font-cormorant text-[20px]'
-          >
-            View Full Report (PDF)
-          </a>
-        </section>
-      )}
+      {flecoMeta.pdfUrl && <PDFButton url={flecoMeta.pdfUrl} />}
     </main>
   );
 };

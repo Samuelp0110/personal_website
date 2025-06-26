@@ -9,7 +9,7 @@ const metadata: ProjectMetadata = {
   date: "2024-05-02",
   tags: ["entrepreneurship", "marketplace", "college", "expo"],
   image: noImage,
-  pdfUrl: "https://example.com/fleco-report.pdf", // or leave undefined
+  pdfUrl: "https://example.com/fleco-report.pdf",
 };
 
 export default metadata;

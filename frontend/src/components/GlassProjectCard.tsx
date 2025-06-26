@@ -23,7 +23,7 @@ const GlassProjectCard: FC<GlassProjectCardProps> = ({
             backgroundImage: `url(${imageSrc})`,
           }}
         >
-          <div className='text-center text-background bg-primary/40 backdrop-blur-sm rounded-md px-4 py-2'>
+          <div className='text-center text-background bg-primary/40 backdrop-blur-sm rounded-2xl px-4 py-2'>
             <h3 className='text-2xl font-semibold font-cormorant mb-1'>
               {title}
             </h3>
