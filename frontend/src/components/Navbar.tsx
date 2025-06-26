@@ -1,11 +1,15 @@
 "use client"; // Safe to ignore in a Vite + React SPA, usually a Next.js directive
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router"; // React Router v7
 import Button from "./Button"; // Your reusable Button component
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // Tracks mobile menu toggle
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
 
   return (
     <nav className='w-full px-6 py-4 bg-primary border-b-4 border-background'>
@@ -49,37 +53,39 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             aria-label='Toggle Menu'
-            className='text-body border-2 border-body rounded px-3 py-1'
+            className='text-body border-2 border-body rounded px-3 py-1 text-2xl'
           >
-            ☰
+            {isOpen ? "✕" : "☰"}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className='md:hidden mt-4 flex flex-col items-center gap-4'>
-          <Link
-            to='/about'
-            className='text-[20px] font-cormorant text-black'
-            onClick={() => setIsOpen(false)} // Close menu after click
-          >
-            About Me
-          </Link>
-          <Link
-            to='/projects'
-            className='text-[20px] font-cormorant text-black'
-            onClick={() => setIsOpen(false)}
-          >
-            Projects
-          </Link>
-          <a href='mailto:spreston110@gmail.com'>
-            <Button className='bg-accent border-body text-body hover:bg-body hover:text-accent hover:border-accent text-[24px] font-semibold px-4 py-2 rounded-lg'>
-              Let’s Connect
-            </Button>
-          </a>
-        </div>
-      )}
+      {/* Mobile Menu with Animation */}
+      <div
+        className={`md:hidden transition-all duration-300 overflow-hidden flex flex-col items-center gap-4 ${
+          isOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
+        }`}
+      >
+        <Link
+          to='/about'
+          className='text-[20px] font-cormorant text-black'
+          onClick={() => setIsOpen(false)}
+        >
+          About Me
+        </Link>
+        <Link
+          to='/projects'
+          className='text-[20px] font-cormorant text-black'
+          onClick={() => setIsOpen(false)}
+        >
+          Projects
+        </Link>
+        <a href='mailto:spreston110@gmail.com'>
+          <Button className='bg-accent border-body text-body hover:bg-body hover:text-accent hover:border-accent text-[24px] font-semibold px-4 py-2 rounded-lg'>
+            Let’s Connect
+          </Button>
+        </a>
+      </div>
     </nav>
   );
 }

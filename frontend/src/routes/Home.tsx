@@ -1,21 +1,29 @@
-import Button from "../components/Button";
+import type { FC } from "react";
+import ProjectCard from "../components/ProjectCard";
+import HeroSection from "../components/HeroSection";
+import projectsMetadata from "../data/projectsMetadata";
 
-const Home = () => {
-  const handleClick = () => {
-    alert("Button was clicked!");
-  };
+// Show top 3
+const recentProjects = projectsMetadata.slice(0, 3);
+
+const Home: FC = () => {
   return (
-    <div>
-      <h1 className='text-xl mb-4'>Welcome to the Home Page</h1>
-      <div>
-        <Button
-          onClick={handleClick}
-          className='bg-background'
-        >
-          Let's Connect!
-        </Button>
-      </div>
-    </div>
+    <main className='flex flex-col items-center justify-center bg-primary'>
+      {/* Project Section 1 */}
+      <HeroSection />
+      {recentProjects.map((project, index) => (
+        <ProjectCard
+          key={project.slug}
+          title={project.title}
+          description={project.description}
+          imageSrc={project.image}
+          link={`/projects/${project.slug}`} // or project.pdfUrl if preferred
+          reverse={index % 2 !== 0} // alternate layout
+        />
+      ))}
+
+      {/* Add more if needed */}
+    </main>
   );
 };
 
