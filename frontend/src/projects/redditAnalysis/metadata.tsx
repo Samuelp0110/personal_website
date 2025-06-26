@@ -1,14 +1,14 @@
 import type { ProjectMetadata } from "../../types/projects";
-import noImage from "../../assets/no_image.jpg";
+import Image from "./Header_Ukraine.jpg";
 
 const metadata: ProjectMetadata = {
-  slug: "skillforge",
-  title: "SkillForge – Gamified Skill Tracking App",
+  slug: "NLPAnalysis",
+  title: "NLP Analysis - Russia & Ukraine",
   description:
-    "A mobile-first app designed to help users track personal growth in areas like coding, design, and fitness through quests and badges.",
+    "An experiment on how capable different AI models are when it comes to analyzing peoples feelings towards the Ukraine - Russia war. ",
   date: "2024-01-22",
-  tags: ["gamification", "productivity", "personal development"],
-  image: noImage,
+  tags: ["data analysis", "research", "ai/ml"],
+  image: Image,
 };
 
 export default metadata;

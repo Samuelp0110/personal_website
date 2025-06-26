@@ -1,20 +1,13 @@
 import type { FC } from "react";
 import GlassProjectCard from "../components/GlassProjectCard";
 import projectsMetadata from "../data/projectsMetadata";
-import HeroBackground from "../assets/fantasy_nature_background.jpg";
+import HeroHeader from "../components/HeroHeader";
 
 const ProjectsPage: FC = () => {
   return (
     <main className='w-full min-h-screen bg-primary flex flex-col items-center'>
       {/* Hero Banner */}
-      <section
-        className='w-full bg-cover bg-center flex justify-center items-center px-6 py-32'
-        style={{ backgroundImage: `url(${HeroBackground})` }}
-      >
-        <h1 className='max-w-[1000px] text-center text-secondary text-[32px] sm:text-[48px] md:text-[76px] font-cormorant font-bold leading-tight'>
-          My Projects
-        </h1>
-      </section>
+      <HeroHeader title='My Projects' />
 
       {/* Projects Grid - dynamically rendered */}
       <section className='w-full max-w-[1440px] px-6 md:px-24 mt-16'>

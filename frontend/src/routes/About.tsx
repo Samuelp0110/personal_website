@@ -1,19 +1,12 @@
 import type { FC } from "react";
 import AboutMeGroupPhoto from "../assets/AboutMeGroupPhoto.jpg";
-import HeroBackground from "../assets/fantasy_nature_background.jpg";
+import HeroHeader from "../components/HeroHeader";
 
 const About: FC = () => {
   return (
     <main className='bg-primary w-full overflow-hidden flex flex-col items-center'>
       {/* Hero Section */}
-      <section
-        className='w-full bg-cover bg-center flex justify-center items-center px-6 py-32'
-        style={{ backgroundImage: `url(${HeroBackground})` }}
-      >
-        <h1 className='max-w-[1000px] text-center text-secondary text-[32px] sm:text-[48px] md:text-[76px] font-cormorant font-bold leading-tight'>
-          Creative. Inquisitive. Analytical.
-        </h1>
-      </section>
+      <HeroHeader title='Creative. Inquisitive. Analytical' />
 
       {/* Bio Text Section */}
       <section className='px-18 py-24 flex justify-center'>
