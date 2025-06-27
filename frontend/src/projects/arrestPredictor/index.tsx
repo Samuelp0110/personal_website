@@ -1,11 +1,12 @@
 import meta from "./metadata";
 import PDFButton from "../../components/PDFButton";
+import ProjectLayout from "../../components/projectBlocks/ProjectLayout";
 
 const ArrestPage = () => {
   return (
-    <main className="bg-primary w-full flex flex-col items-center mb-12">
+    <ProjectLayout showHeader metadata={meta}>
       <PDFButton slug={meta.slug}>See the Report</PDFButton>
-    </main>
+    </ProjectLayout>
   );
 };
 
