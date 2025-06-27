@@ -7,6 +7,7 @@ import NotFound from "./routes/NotFound";
 import Temp from "./routes/Temp";
 import ProjectPageLoader from "./routes/ProjectPageLoader";
 import ErrorFallback from "./routes/ErrorFallback";
+import PDFViewerPage from "./routes/PDFViewerPage";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,11 @@ export const router = createBrowserRouter([
       {
         path: "/projects/:slug",
         element: <ProjectPageLoader />,
+        errorElement: <ErrorFallback />,
+      },
+      {
+        path: "/pdf/:slug",
+        element: <PDFViewerPage />,
         errorElement: <ErrorFallback />,
       },
     ],
