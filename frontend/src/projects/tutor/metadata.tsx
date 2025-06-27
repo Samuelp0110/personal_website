@@ -1,5 +1,5 @@
 import type { ProjectMetadata } from "../../types/projects";
-import noImage from "../../assets/no_image.jpg";
+import noImage from "../../../public/NoImage.svg";
 
 const metadata: ProjectMetadata = {
   slug: "tutor",
