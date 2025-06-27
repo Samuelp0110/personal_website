@@ -1,0 +1,55 @@
+import React from "react";
+
+interface BentoGridProps {
+  items: {
+    src: string;
+    alt?: string;
+    caption?: string;
+    span?: string; // e.g., "col-span-2 row-span-1"
+  }[];
+  columns?: number; // default: 3
+  gap?: string; // default: "gap-6"
+  rounded?: boolean; // default: true
+}
+
+const BentoGrid: React.FC<BentoGridProps> = ({
+  items,
+  columns = 3,
+  gap = "gap-6",
+  rounded = true,
+}) => {
+  const gridColsClass = `grid-cols-1 sm:grid-cols-2 md:grid-cols-${columns}`;
+
+  return (
+    <div className={`grid ${gridColsClass} ${gap}`}>
+      {items.map((item, idx) => {
+        const imageToUse = item.src?.trim() || "/NoImage.svg";
+        const spanClass = item.span || "col-span-1 row-span-1";
+
+        return (
+          <div
+            key={idx}
+            className={`relative group w-full h-full ${spanClass}`}
+          >
+            <div className="aspect-[4/3] w-full max-w-[400px] mx-auto">
+              <img
+                src={imageToUse}
+                alt={item.alt || ""}
+                className={`w-full h-full object-contain ${
+                  rounded ? "rounded-xl" : ""
+                } shadow-md`}
+              />
+            </div>
+            {item.caption && (
+              <div className="absolute bottom-0 left-0 w-full bg-black/60 text-white text-sm px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity rounded-b-xl">
+                {item.caption}
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+export default BentoGrid;

@@ -1,0 +1,79 @@
+import React, { useState } from "react";
+
+interface BeforeAfterSliderProps {
+  beforeImage: string;
+  afterImage: string;
+  beforeLabel?: string;
+  afterLabel?: string;
+  height?: string;
+  tintAfter?: boolean;
+}
+
+const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
+  beforeImage,
+  afterImage,
+  beforeLabel = "Before",
+  afterLabel = "After",
+  height = "400px",
+  tintAfter = false,
+}) => {
+  const [sliderValue, setSliderValue] = useState(100); // Start with full before image
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSliderValue(Number(e.target.value));
+  };
+
+  const fallbackBefore = beforeImage?.trim() || "/NoImage.svg";
+  const fallbackAfter = afterImage?.trim() || "/NoImage.svg";
+
+  return (
+    <div
+      className="relative w-full overflow-hidden rounded-xl shadow-md"
+      style={{ height }}
+    >
+      {/* After Image (always fully visible) */}
+      <img
+        src={fallbackAfter}
+        alt="After"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      />
+
+      {/* Before Image (clipped like a curtain) */}
+      <div
+        className="absolute inset-0 overflow-hidden z-10"
+        style={{ width: `${sliderValue}%` }}
+      >
+        <img
+          src={fallbackBefore}
+          alt="Before"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Optional Tint on After */}
+      {tintAfter && (
+        <div className="absolute inset-0 bg-secondary/20 pointer-events-none z-5" />
+      )}
+
+      {/* Labels */}
+      <div className="absolute top-2 left-2 bg-black/50 text-white text-sm px-3 py-1 rounded z-20">
+        {beforeLabel}
+      </div>
+      <div className="absolute top-2 right-2 bg-black/50 text-white text-sm px-3 py-1 rounded z-20">
+        {afterLabel}
+      </div>
+
+      {/* Slider */}
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value={sliderValue}
+        onChange={handleChange}
+        className="absolute bottom-0 left-0 w-full appearance-none h-2 bg-gray-300 accent-secondary z-30"
+      />
+    </div>
+  );
+};
+
+export default BeforeAfterSlider;
