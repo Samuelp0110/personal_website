@@ -2,14 +2,14 @@ import type { ProjectMetadata } from "../../types/projects";
 import noImage from "../../assets/no_image.jpg";
 
 const metadata: ProjectMetadata = {
-  slug: "storyweaver",
-  title: "StoryWeaver – AI-Driven Narrative Generator",
+  slug: "aitutor",
+  title: "AI Tutor - Turning AI into a Critical Thinking Partner",
   description:
-    "A creative tool powered by generative AI that helps writers and game masters craft characters, plots, and lore from simple prompts.",
+    "An experiment on if AI's such as ChatGPT can be turned into viable tutors and not barebone answering machines.",
   date: "2024-03-15",
   tags: ["AI", "writing", "creative tools", "generative"],
   image: noImage,
-  pdfUrl: "https://example.com/storyweaver.pdf",
+  pdfUrl: undefined,
 };
 
 export default metadata;

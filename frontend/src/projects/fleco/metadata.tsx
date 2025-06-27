@@ -1,5 +1,5 @@
 import type { ProjectMetadata } from "../../types/projects";
-import noImage from "../../assets/no_image.jpg";
+import Image from "./fleco.jpg";
 
 const metadata: ProjectMetadata = {
   slug: "fleco",
@@ -8,7 +8,7 @@ const metadata: ProjectMetadata = {
     "An environmentally conscious resale platform for students, built for Stevens Innovation Expo 2024.",
   date: "2024-05-02",
   tags: ["entrepreneurship", "marketplace", "college", "expo"],
-  image: noImage,
+  image: Image, 
   pdfUrl: undefined,
 };
 

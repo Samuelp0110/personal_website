@@ -1,8 +1,8 @@
 import type { ProjectMetadata } from "../../types/projects";
-import Image from "./Header_Ukraine.jpg";
+import Image from "./headerUkraine.jpg";
 
 const metadata: ProjectMetadata = {
-  slug: "NLPAnalysis",
+  slug: "redditAnalysis",
   title: "NLP Analysis - Russia & Ukraine",
   description:
     "An experiment on how capable different AI models are when it comes to analyzing peoples feelings towards the Ukraine - Russia war. ",
