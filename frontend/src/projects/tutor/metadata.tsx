@@ -1,14 +1,20 @@
 import type { ProjectMetadata } from "../../types/projects";
-import noImage from "../../../public/NoImage.svg";
+import Image from "./AI_Human.jpg";
 
 const metadata: ProjectMetadata = {
   slug: "tutor",
-  title: "AI Tutor - Turning AI into a Critical Thinking Partner",
+  title: "Turning AI into a Critical Thinking Partner",
   description:
-    "An experiment on if AI's such as ChatGPT can be turned into viable tutors and not barebone answering machines.",
-  date: "2024-03-15",
-  tags: ["AI", "writing", "creative tools", "generative"],
-  image: noImage,
+    "A full-stack educational AI system that rewrites prompts to foster critical thinking instead of direct answers. Evaluated through a controlled experiment with measurable learning gains.",
+  date: "2025-05-07",
+  tags: [
+    "AI in Education",
+    "Data Science",
+    "Prompt Engineering",
+    "React",
+    "OpenAI",
+  ],
+  image: Image,
   pdfUrl: undefined,
 };
 

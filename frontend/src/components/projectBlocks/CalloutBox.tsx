@@ -2,8 +2,9 @@ import React from "react";
 
 interface CalloutBoxProps {
   type: "info" | "success" | "warning" | "error";
-  text: string;
+  text?: string;
   title?: string;
+  children?: React.ReactNode;
 }
 
 const iconMap: Record<CalloutBoxProps["type"], string> = {
@@ -20,7 +21,12 @@ const colorMap: Record<CalloutBoxProps["type"], string> = {
   error: "red-500",
 };
 
-const CalloutBox: React.FC<CalloutBoxProps> = ({ type, text, title }) => {
+const CalloutBox: React.FC<CalloutBoxProps> = ({
+  type,
+  text,
+  title,
+  children,
+}) => {
   const icon = iconMap[type];
   const borderColor = `border-${colorMap[type]}`;
   const bgColor = `bg-${colorMap[type].replace("500", "100")}`;
@@ -33,7 +39,7 @@ const CalloutBox: React.FC<CalloutBoxProps> = ({ type, text, title }) => {
       <div className={`text-xl ${textColor}`}>{icon}</div>
       <div className="space-y-1 font-cormorant">
         {title && <h3 className="font-semibold text-lg">{title}</h3>}
-        <p className="text-body">{text}</p>
+        {children ? children : <p className="text-body">{text}</p>}
       </div>
     </div>
   );

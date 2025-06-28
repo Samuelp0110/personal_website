@@ -51,7 +51,7 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({
       )}
 
       {/* Main content area with responsive horizontal padding */}
-      <div className="flex flex-col items-center px-4 sm:px-6 lg:px-12 space-y-7 mb-4">
+      <div className="flex flex-col items-center px-16 md:px-12 sm:px-8 space-y-7 mb-4">
         {children}
       </div>
     </div>

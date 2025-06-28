@@ -3,11 +3,17 @@ import Image from "./arrestHeatMap.jpg";
 
 const metadata: ProjectMetadata = {
   slug: "arrestPredictor",
-  title: "NYPD Traffic Stop Analysis",
+  title: "Can Circumstantial Data Predict Arrest Outcomes?",
   description:
-    "An experiment to see if you can predict an arrest during a NYC traffic stop based on circumstantial data",
+    "Explored NYPD vehicle stop data to predict arrest outcomes using ML classifiers. Showcased both predictive limitations and ethical implications.",
   date: "2025-05-14",
-  tags: ["data science", "machine learning", "analytics"],
+  tags: [
+    "Data Science",
+    "Machine Learning",
+    "XGBoost",
+    "Law Enforcement Data",
+    "Bias Analysis",
+  ],
   image: Image,
   pdfUrl: undefined,
 };

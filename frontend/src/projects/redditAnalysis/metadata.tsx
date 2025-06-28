@@ -3,12 +3,13 @@ import Image from "./headerUkraine.jpg";
 
 const metadata: ProjectMetadata = {
   slug: "redditAnalysis",
-  title: "NLP Analysis - Russia & Ukraine",
+  title: "Reddit Sentiment & Topic Analysis During the Ukraine–Russia Conflict",
   description:
-    "An experiment on how capable different AI models are when it comes to analyzing peoples feelings towards the Ukraine - Russia war. ",
-  date: "2024-01-22",
-  tags: ["data analysis", "research", "ai/ml"],
+    "Analyzed over 50,000 Reddit posts using TF-IDF, LDA, and neural networks to extract sentiment and topical focus.",
+  date: "2025-05-7",
+  tags: ["Data Science", "NLP", "Machine Learning", "Social Media Analytics"],
   image: Image,
+  pdfUrl: undefined,
 };
 
 export default metadata;

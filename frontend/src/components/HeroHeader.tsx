@@ -3,17 +3,30 @@ import HeroBackground from "../assets/fantasy_nature_background.jpg";
 
 interface HeroHeaderProps {
   title: string;
+  subtitle?: string;
+  backgroundImage?: string;
 }
 
-const HeroHeader: FC<HeroHeaderProps> = ({ title }) => {
+const HeroHeader: FC<HeroHeaderProps> = ({
+  title,
+  subtitle,
+  backgroundImage,
+}) => {
+  const bgImage = backgroundImage || HeroBackground;
+
   return (
     <section
-      className='w-full h-70 bg-cover bg-center flex justify-center items-center px-6 py-32'
-      style={{ backgroundImage: `url(${HeroBackground})` }}
+      className="w-full h-70 bg-cover bg-center flex flex-col justify-center items-center px-6 py-32"
+      style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <h1 className='max-w-[1000px] text-center text-secondary text-[32px] sm:text-[48px] md:text-[76px] font-cormorant font-bold leading-tight'>
+      <h1 className="max-w-[1000px] text-center text-secondary text-[32px] sm:text-[48px] md:text-[76px] font-cormorant font-bold leading-tight">
         {title}
       </h1>
+      {subtitle && (
+        <p className="text-center text-background text-lg sm:text-xl md:text-2xl mt-4 max-w-[800px] font-cormorant">
+          {subtitle}
+        </p>
+      )}
     </section>
   );
 };
