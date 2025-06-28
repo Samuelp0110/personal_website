@@ -55,7 +55,7 @@ const ArrestPage = () => {
         text="Building arrest predictors without context can reinforce historical bias. This project helps illustrate how data science can be used both for insights — and for critical reflection."
       />
 
-      <PDFButton slug="arrestpredictor">View Full Report</PDFButton>
+      <PDFButton slug="arrestPredictor">View Full Report</PDFButton>
 
       <ParagraphBlock maxWidth="xl" align="center">
         Future improvements could integrate command-level reasons for stops,

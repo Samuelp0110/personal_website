@@ -7,9 +7,9 @@ const PDFViewerPage = () => {
 
   return (
     <main className="flex flex-col items-center bg-primary text-body px-6 py-12 min-h-screen">
-      <h1 className="text-[32px] md:text-[48px] font-bold font-cormorant mb-6">
+      {/* <h1 className="text-[32px] md:text-[48px] font-bold font-cormorant mb-6">
         {slug ? slug.charAt(0).toUpperCase() + slug.slice(1) : ""}
-      </h1>
+      </h1> */}
 
       {fileUrl ? (
         <iframe

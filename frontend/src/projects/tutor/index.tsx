@@ -56,7 +56,7 @@ const TutorPage = () => {
         text="This project combined prompt engineering, behavioral data logging, experimental design, statistical analysis (t-tests, correlations), and thematic qualitative coding to evaluate the cognitive impact of AI interaction styles."
       />
 
-      <PDFButton slug="aiTutor">View Full Report</PDFButton>
+      <PDFButton slug="tutor">View Full Report</PDFButton>
 
       <ParagraphBlock maxWidth="xl" align="center">
         Future work will integrate adaptive prompts, expand beyond math-focused
