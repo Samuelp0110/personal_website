@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import Button from "./Button";
 import { Link } from "react-router";
+import { ChevronRight } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
@@ -40,6 +41,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
           <Link to={link}>
             <Button className="bg-secondary text-body border-body hover:bg-body hover:text-accent hover:border-accent text-[32px] font-semibold">
               Learn More
+              <ChevronRight size={32} />
             </Button>
           </Link>
         </div>
