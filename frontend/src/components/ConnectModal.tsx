@@ -54,17 +54,21 @@ const ConnectModal: React.FC<ConnectModalProps> = ({ isOpen, onClose }) => {
               </a>
             </li>
           ))}
-
-          <li>
+          <li className="flex justify-center">
             {showPhone ? (
-              <div className="text-lg text-background flex justify-center items-center gap-2">
-                <Phone className="w-5 h-5" />
-                845-262-8575
+              <div className="text-lg text-background flex items-center gap-2">
+                <a
+                  className="text-lg text-background flex items-center gap-2"
+                  href="tel:8462528575"
+                >
+                  <Phone className="w-5 h-5" />
+                  845-262-8575
+                </a>
               </div>
             ) : (
               <button
                 onClick={() => setShowPhone(true)}
-                className="flex items-center gap-3 justify-center text-lg text-background hover:underline"
+                className="flex items-center gap-3 text-lg text-background hover:underline"
               >
                 <Phone className="w-5 h-5" /> Show Phone
               </button>
