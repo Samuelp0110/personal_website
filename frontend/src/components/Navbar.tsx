@@ -46,7 +46,7 @@ export default function Navbar() {
           {/* CTA Button wrapped in mailto anchor */}
           <Button
             onClick={() => setIsModalOpen(true)}
-            className="bg-accent border-body text-body hover:bg-body hover:text-accent hover:border-accent text-[24px] md:text-[32px] font-semibold px-4 py-2 rounded-lg"
+            className="bg-accent border-body text-body hover:bg-body hover:text-accent hover:border-accent text-[18px] md:text-[24px] font-semibold px-4 py-2 rounded-lg"
           >
             Let’s Connect
           </Button>
@@ -86,7 +86,7 @@ export default function Navbar() {
         </Link>
         <Button
           onClick={() => setIsModalOpen(true)}
-          className="bg-accent border-body text-body hover:bg-body hover:text-accent hover:border-accent text-[24px] md:text-[32px] font-semibold px-4 py-2 rounded-lg"
+          className="bg-accent border-body text-body hover:bg-body hover:text-accent hover:border-accent text-[18px] md:text-[24px] font-semibold px-4 py-2 rounded-lg"
         >
           Let’s Connect
         </Button>
