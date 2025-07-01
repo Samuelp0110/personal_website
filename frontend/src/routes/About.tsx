@@ -13,8 +13,8 @@ const About: FC = () => {
       <section className="px-18 py-15 flex justify-center">
         <div className="max-w-[1000px] text-justify flex flex-col gap-4 text-[20px] md:text-[24px] font-cormorant font-normal text-background">
           <p>
-            Hello There! I’m Sam Preston. I have a Masters of Computer Science
-            in Software Development (2025) and a Bachelors of Science in
+            Hello there! I’m Sam Preston. I have a Master's of Computer Science
+            in Software Development (2025) and a Bachelor's of Science in
             Business with concentrations in Computer Science and Information
             Systems (2024) from{" "}
             <a
@@ -25,7 +25,7 @@ const About: FC = () => {
             >
               Stevens Institute of Technology
             </a>{" "}
-            in Hoboken, NJ! I strive for creativity in anything I do, whether it
+            in Hoboken, NJ. I strive for creativity in anything I do, whether it
             be creating a story with friends, developing new and interesting
             software or learning new things.
           </p>
