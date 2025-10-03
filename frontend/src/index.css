@@ -1,11 +1,23 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 @theme {
-  --color-primary: #DEF5F2;
+  --color-primary: #FFFFFF;
   --color-secondary: #C2E0D2;
   --color-background: #0C0B22;
   --color-body: #2E3E41;
   --color-accent: #B49F9B;
 
+  /* Regal */
+
+  --color-rfg: #11100F;        /* Foreground / Text */
+  --color-rbg: #EFE9E1;        /* Background */
+  --color-rprimary: #5D1C34;   /* Primary (burgundy) */
+  --color-rsecondary: #A67D44; /* Secondary (gold) */
+  --color-rneutral: #CDBCAB;   /* Neutral (beige) */
+  --color-rtertiary: #899481;  /* Tertiary (sage green) */
+
   --font-cormorant: "Cormorant Garamond", serif;
+  --font-roboto: "Roboto", serif;
+
 }

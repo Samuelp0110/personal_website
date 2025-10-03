@@ -10,8 +10,14 @@ import FinalResults from "./final_results.png";
 
 const ArrestPage = () => {
   return (
-    <ProjectLayout showHeader metadata={meta}>
-      <ParagraphBlock maxWidth="xl" align="center">
+    <ProjectLayout
+      showHeader
+      metadata={meta}
+    >
+      <ParagraphBlock
+        maxWidth='xl'
+        align='center'
+      >
         This project analyzed New York City vehicle stop data to explore whether
         arrests during traffic stops can be predicted using only circumstantial
         data such as driver demographics, time of stop, location, and vehicle
@@ -22,26 +28,29 @@ const ArrestPage = () => {
 
       <ImageTextBlock
         imageSrc={FinalResults}
-        imageAlt="Bar chart comparing accuracy scores of all models: XGBoost, RF, GBoost, DTree, etc."
-        title="How Accurate Were the Models?"
-        text="XGBoost outperformed all other classifiers with 81.67% accuracy, followed by Random Forest at 81.26%. Simpler models like Logistic Regression and SVM performed poorly, highlighting the complexity of the underlying feature interactions."
+        imageAlt='Bar chart comparing accuracy scores of all models: XGBoost, RF, GBoost, DTree, etc.'
+        title='How Accurate Were the Models?'
+        text='XGBoost outperformed all other classifiers with 81.67% accuracy, followed by Random Forest at 81.26%. Simpler models like Logistic Regression and SVM performed poorly, highlighting the complexity of the underlying feature interactions.'
       />
 
       <SectionHeader
-        title="A Word of Caution"
-        subtitle="When prediction alone isn’t enough"
-        align="center"
+        title='A Word of Caution'
+        subtitle='When prediction alone isn’t enough'
+        align='center'
         hasDivider
       />
 
       <QuoteBlock
         quote="It's near impossible to predict whether an arrest was made based on circumstantial information alone."
-        author="Project Report"
-        align="center"
-        maxWidth="lg"
+        author='Project Report'
+        align='center'
+        maxWidth='lg'
       />
 
-      <ParagraphBlock maxWidth="xl" align="center">
+      <ParagraphBlock
+        maxWidth='xl'
+        align='center'
+      >
         While the predictive results were statistically interesting, the project
         surfaced a deeper insight: **without knowing the reason for the stop,
         predictions may reflect systemic patterns rather than individual
@@ -50,14 +59,17 @@ const ArrestPage = () => {
       </ParagraphBlock>
 
       <CalloutBox
-        type="warning"
-        title="Why It Matters"
-        text="Building arrest predictors without context can reinforce historical bias. This project helps illustrate how data science can be used both for insights — and for critical reflection."
+        type='warning'
+        title='Why It Matters'
+        text='Building arrest predictors without context can reinforce historical bias. This project helps illustrate how data science can be used both for insights — and for critical reflection.'
       />
 
-      <PDFButton slug="arrestPredictor">View Full Report</PDFButton>
+      <PDFButton slug='arrestPredictor'>View Full Report</PDFButton>
 
-      <ParagraphBlock maxWidth="xl" align="center">
+      <ParagraphBlock
+        maxWidth='xl'
+        align='center'
+      >
         Future improvements could integrate command-level reasons for stops,
         compare predictive bias across demographics, or build separate pipelines
         for different jurisdictions. This project offers a grounded, realistic

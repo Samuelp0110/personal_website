@@ -1,11 +1,13 @@
-// Type definition for a project’s metadata
-export interface ProjectMetadata {
+// Type definition for a Work Experiences metadata
+
+export interface PositionMetadata {
   slug: string; // used for route like /projects/slug
-  title: string; // project title
+  title: string; // Position Title
+  roleType: string;
+  company: string; // Company Worked For
   description: string; // short summary
   date: string; // ISO format: "2024-06-01"
   tags: string[]; // for future filtering
   image: string; // path to preview image
   pdfUrl?: string; // optional link to PDF report
 }
- 

@@ -1,10 +1,5 @@
-import React, { useState } from "react";
-import { Github, Mail, Phone, Linkedin } from "lucide-react";
-
-interface ConnectModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
+import { Github, Mail, Phone, Linkedin, X } from "lucide-react";
+import { Dialog } from "radix-ui";
 
 const links = [
   {
@@ -22,60 +17,54 @@ const links = [
     label: "GitHub",
     href: "https://github.com/Samuelp0110",
   },
+  {
+    icon: <Phone className='w-5 h-5' />,
+    label: "845-262-8575",
+    href: "tel:8462528575",
+  },
 ];
 
-const ConnectModal: React.FC<ConnectModalProps> = ({ isOpen, onClose }) => {
-  const [showPhone, setShowPhone] = useState(false);
-
-  if (!isOpen) return null;
-
+const ConnectModal = () => {
   return (
-    <div className='fixed inset-0 z-50 bg-black/50 flex justify-center items-center'>
-      <div className='bg-primary outline-2 outline-background  w-full max-w-md mx-4 rounded-xl shadow-lg p-6 space-y-4 text-center relative animate-fade-in'>
-        <button
-          onClick={onClose}
-          className='absolute top-2 right-3 text-gray-500 hover:text-gray-800 text-xl'
-        >
-          ×
-        </button>
-
-        <h2 className='text-2xl font-bold font-cormorant'>Let’s Connect</h2>
-
-        <ul className='space-y-3'>
-          {links.map(({ icon, label, href }) => (
-            <li key={label}>
-              <a
-                href={href}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='flex items-center gap-3 justify-center text-lg text-background hover:underline'
-              >
-                {icon} {label}
-              </a>
-            </li>
-          ))}
-          <li className='flex justify-center'>
-            {showPhone ? (
-              <div className='text-lg text-background flex items-center gap-2'>
-                <a
-                  className='text-lg text-background flex items-center gap-2'
-                  href='tel:8462528575'
-                >
-                  <Phone className='w-5 h-5' />
-                  845-262-8575
-                </a>
-              </div>
-            ) : (
+    <div>
+      <Dialog.Root>
+        <Dialog.Trigger asChild>
+          <button className='bg-rbg text-rprimary text-xl rounded-full cursor-pointer duration-200 hover:shadow-sm shadow-rprimary py-1 px-4 font-bold font-cormorant'>
+            Let's Connect
+          </button>
+        </Dialog.Trigger>
+        <Dialog.Portal>
+          <Dialog.Overlay className='fixed inset-0 bg-black/50 data-[state=open]:animate-overlayShow' />
+          <Dialog.Content className='fixed left-1/2 top-1/2 w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-xl bg-rneutral p-4 shadow-[var(--shadow-6)] focus:outline-none data-[state=open]:animate-contentShow'>
+            <Dialog.Title className='mb-4 text-xl font-medium text-rfg'>
+              Let's Connect
+            </Dialog.Title>
+            <ul className='space-y-3'>
+              {links.map(({ icon, label, href }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='flex items-center gap-3 justify-center text-lg text-rfg hover:underline'
+                  >
+                    <span className=''> {icon} </span>
+                    <span className=''> {label} </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <Dialog.Close asChild>
               <button
-                onClick={() => setShowPhone(true)}
-                className='flex items-center gap-3 text-lg text-background hover:underline'
+                className='absolute right-4 top-4 inline-flex p-0.5 appearance-none items-center justify-center rounded-full text-rfg bg-rfg/10 transition-colors duration-200 hover:bg-rfg/30 '
+                aria-label='Close'
               >
-                <Phone className='w-5 h-5' /> Show Phone
+                <X />
               </button>
-            )}
-          </li>
-        </ul>
-      </div>
+            </Dialog.Close>
+          </Dialog.Content>
+        </Dialog.Portal>
+      </Dialog.Root>
     </div>
   );
 };

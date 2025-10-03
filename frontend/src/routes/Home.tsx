@@ -4,11 +4,11 @@ import HeroSection from "../components/HeroSection";
 import projectsMetadata from "../data/projectsMetadata";
 
 // Show top 3
-const recentProjects = projectsMetadata.slice(0, 3);
+const recentProjects = projectsMetadata.slice(0, 1);
 
 const Home: FC = () => {
   return (
-    <main className='flex flex-col items-center justify-center bg-primary'>
+    <main className='flex flex-col items-center justify-center'>
       {/* Project Section 1 */}
       <HeroSection />
       {recentProjects.map((project, index) => (

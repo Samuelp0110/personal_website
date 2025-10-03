@@ -2,41 +2,41 @@ import { Instagram, Github, Linkedin } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full px-6 py-6 bg-body">
-      <div className="max-w-[1440px] mx-auto flex items-center justify-between">
+    <footer className='w-full px-6 py-3 bg-rneutral'>
+      <div className='max-w-[1440px] mx-auto flex items-center justify-between'>
         {/* Name */}
         <img
-          src="/SamPrestonLogo.svg"
-          alt="Samuel Preston logo"
-          className="h-10 md:h-14 w-auto"
+          src='/SamPrestonLogo.svg'
+          alt='Samuel Preston logo'
+          className='h-10 md:h-14 w-auto'
         />
 
         {/* Social Icons */}
-        <div className="flex items-center gap-6">
+        <div className='flex items-center gap-6'>
           <a
-            href="https://www.linkedin.com/in/SamuelRMPreston/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Linkedin"
-            className="text-secondary hover:text-accent transition-colors duration-300"
+            href='https://www.linkedin.com/in/SamuelRMPreston/'
+            target='_blank'
+            rel='noopener noreferrer'
+            aria-label='Linkedin'
+            className='text-rprimary hover:text-rprimary transition-colors duration-300'
           >
             <Linkedin size={24} />
           </a>
           <a
-            href="https://github.com/Samuelp0110"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="text-secondary hover:text-accent transition-colors duration-300"
+            href='https://github.com/Samuelp0110'
+            target='_blank'
+            rel='noopener noreferrer'
+            aria-label='GitHub'
+            className='text-rprimary hover:text-rprimary transition-colors duration-300'
           >
             <Github size={24} />
           </a>
           <a
-            href="https://www.instagram.com/sampreston110/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            className="text-secondary hover:text-accent transition-colors duration-300"
+            href='https://www.instagram.com/sampreston110/'
+            target='_blank'
+            rel='noopener noreferrer'
+            aria-label='Instagram'
+            className='text-rprimary hover:text-rprimary transition-colors duration-300'
           >
             <Instagram size={24} />
           </a>

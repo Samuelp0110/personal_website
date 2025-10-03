@@ -5,23 +5,23 @@ import LinkPillHeader from "../components/LinkPullHeader";
 
 const About: FC = () => {
   return (
-    <main className="bg-primary w-full overflow-hidden flex flex-col items-center">
+    <main className=' w-full overflow-hidden flex flex-col items-center'>
       {/* Hero Section */}
-      <HeroHeader title="Creative. Inquisitive. Analytical" />
+      <HeroHeader title='Creative. Inquisitive. Analytical' />
 
       {/* Bio Text Section */}
-      <section className="px-18 py-15 flex justify-center">
-        <div className="max-w-[1000px] text-justify flex flex-col gap-4 text-[20px] md:text-[24px] font-cormorant font-normal text-background">
+      <section className='px-18 py-15 flex justify-center'>
+        <div className='max-w-[1000px] text-justify flex flex-col gap-4 text-[20px] md:text-[24px] font-cormorant font-normal text-background'>
           <p>
             Hello there! I’m Sam Preston. I have a Master's of Computer Science
             in Software Development (2025) and a Bachelor's of Science in
             Business with concentrations in Computer Science and Information
             Systems (2024) from{" "}
             <a
-              href="https://www.stevens.edu/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent font-bold underline hover:text-body transition-colors duration-300"
+              href='https://www.stevens.edu/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-accent font-bold underline hover:text-body transition-colors duration-300'
             >
               Stevens Institute of Technology
             </a>{" "}
@@ -38,10 +38,10 @@ const About: FC = () => {
             nature-centric college marketplace designed to help keep old
             furniture and items off the streets. We were happy to{" "}
             <a
-              href="https://www.stevens.edu/news/ssb-students-showcase-expertise-at-innovation-expo-2024"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent font-bold underline hover:text-body transition-colors duration-300"
+              href='https://www.stevens.edu/news/ssb-students-showcase-expertise-at-innovation-expo-2024'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-accent font-bold underline hover:text-body transition-colors duration-300'
             >
               place second
             </a>{" "}
@@ -57,7 +57,7 @@ const About: FC = () => {
       </section>
 
       <LinkPillHeader
-        subtitle="Useful Links"
+        subtitle='Useful Links'
         links={[
           { label: "CV", url: "/pdf/samuelPrestonCV" },
           {
@@ -68,12 +68,12 @@ const About: FC = () => {
         ]}
       />
       {/* Image Section */}
-      <section className="w-full px-6 py-14 flex justify-center">
-        <div className="w-full max-w-[1000px]">
+      <section className='w-full px-6 py-14 flex justify-center'>
+        <div className='w-full max-w-[1000px]'>
           <img
             src={AboutMeGroupPhoto}
-            alt="Sam Preston with friends at graduation"
-            className="w-full rounded-2xl max-h-[600px] object-cover"
+            alt='Sam Preston with friends at graduation'
+            className='w-full rounded-2xl max-h-[600px] object-cover'
           />
         </div>
       </section>

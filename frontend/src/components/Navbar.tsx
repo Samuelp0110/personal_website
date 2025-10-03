@@ -1,65 +1,84 @@
-"use client"; // Safe to ignore in a Vite + React SPA, usually a Next.js directive
+"use client";
 
 import { useEffect, useState } from "react";
 import { Link } from "react-router"; // React Router v7
-import Button from "./Button"; // Your reusable Button component
 import { Menu, X } from "lucide-react";
 import ConnectModal from "./ConnectModal";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // Tracks mobile menu toggle
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // If scrolling down, hide the navbar
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <nav className="w-full px-6 py-4 bg-primary border-b-4 border-background">
-      <div className="max-w-[1440px] mx-auto flex items-center justify-between">
+    <nav
+      className={`transition-transform duration-300 ease-in-out 
+        ${showNavbar ? "translate-y-0" : "-translate-y-full"} 
+        sticky top-0 z-50 
+        bg-rtertiary shadow-lg ring-1 ring-rfg/5
+        px-6 py-3`}
+    >
+      <div className='max-w-[1440px] mx-auto flex items-center justify-between'>
         {/* Logo that links to homepage */}
         <Link
-          to="/"
-          className="text-[32px] md:text-[44px] font-bold font-cormorant text-black"
+          to='/'
+          className='text-3xl font-bold font-cormorant text-rbg'
         >
           Samuel Preston
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-10">
-          <div className="flex items-center gap-6">
+        <div className='hidden md:flex items-center gap-10'>
+          <div className='flex items-center gap-6'>
             {/* Use Link instead of anchor for SPA routing */}
             <Link
-              to="/about"
-              className="text-[20px] md:text-[24px] font-cormorant text-black"
+              to='/about'
+              className='text-xl px-3 font-semibold font-cormorant text-rbg rounded-2xl transition-colors duration-200 hover:bg-rbg/10'
             >
               About Me
             </Link>
             <Link
-              to="/projects"
-              className="text-[20px] md:text-[24px] font-cormorant text-black"
+              to='/portfolio'
+              className='text-xl px-3 font-semibold font-cormorant text-rbg rounded-2xl transition-colors duration-200 hover:bg-rbg/10'
             >
-              Projects
+              Portfolio
             </Link>
           </div>
-
-          {/* CTA Button wrapped in mailto anchor */}
-          <Button
-            onClick={() => setIsModalOpen(true)}
-            className="bg-accent border-body text-body hover:bg-body hover:text-accent hover:border-accent text-[18px] md:text-[24px] font-semibold px-4 py-2 rounded-lg"
-          >
-            Let’s Connect
-          </Button>
+          <ConnectModal />
         </div>
 
         {/* Mobile Toggle Button (hamburger icon) */}
-        <div className="md:hidden">
+        <div className='md:hidden'>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle Menu"
-            className="text-body border-2 border-body rounded px-1 py-1 text-2xl"
+            aria-label='Toggle Menu'
+            className='text-body border-2 border-body rounded px-1 py-1 text-2xl'
           >
-            {isOpen ? <X color="#0C0B22" /> : <Menu color="#0C0B22" />}
+            {isOpen ? <X color='#0C0B22' /> : <Menu color='#0C0B22' />}
           </button>
         </div>
       </div>
@@ -71,30 +90,21 @@ export default function Navbar() {
         }`}
       >
         <Link
-          to="/about"
-          className="text-[20px] font-cormorant text-background"
+          to='/about'
+          className='text-[20px] font-cormorant text-rbg'
           onClick={() => setIsOpen(false)}
         >
           About Me
         </Link>
         <Link
-          to="/projects"
-          className="text-[20px] font-cormorant text-background"
+          to='/portfolio'
+          className='text-[20px] font-cormorant text-rbg'
           onClick={() => setIsOpen(false)}
         >
-          Projects
+          Portfolio
         </Link>
-        <Button
-          onClick={() => setIsModalOpen(true)}
-          className="bg-accent border-body text-body hover:bg-body hover:text-accent hover:border-accent text-[18px] md:text-[24px] font-semibold px-4 py-2 rounded-lg"
-        >
-          Let’s Connect
-        </Button>
+        <ConnectModal />
       </div>
-      <ConnectModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
     </nav>
   );
 }
