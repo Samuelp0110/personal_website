@@ -23,7 +23,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
   link,
 }) => {
   return (
-    <div className='w-full max-w-[400px] min-w-[300px] flex'>
+    <div className='w-full max-w-[400px] min-w-[300px] flex p-1'>
       <Link to={link}>
         <div className='w-full overflow-hidden rounded-3xl font-cormorant bg-rprimary shadow-[0_2px_10px] shadow-rtertiary'>
           <div className='w-full flex flex-col justify-center p-4'>
