@@ -2,13 +2,13 @@ import { Instagram, Github, Linkedin } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className='w-full px-6 py-3 bg-rneutral'>
+    <footer className='w-full px-6 py-2 bg-rtertiary'>
       <div className='max-w-[1440px] mx-auto flex items-center justify-between'>
         {/* Name */}
         <img
           src='/SamPrestonLogo.svg'
           alt='Samuel Preston logo'
-          className='h-10 md:h-14 w-auto'
+          className='h-10 md:h-12 w-auto'
         />
 
         {/* Social Icons */}

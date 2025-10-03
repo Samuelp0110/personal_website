@@ -7,6 +7,8 @@ const metadata: ProjectMetadata = {
   description:
     "Analyzed over 50,000 Reddit posts using TF-IDF, LDA, and neural networks to extract sentiment and topical focus.",
   date: "2025-05-7",
+  start: "January 2025",
+  end: "May 2025",
   tags: ["Data Science", "NLP", "Machine Learning", "Social Media Analytics"],
   image: Image,
   pdfUrl: undefined,

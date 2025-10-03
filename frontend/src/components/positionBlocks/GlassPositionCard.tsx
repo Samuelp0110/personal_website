@@ -5,6 +5,8 @@ interface GlassPositionCardProps {
   title: string;
   description: string;
   company: string;
+  start: string;
+  end: string;
   imageSrc: string;
   imageAlt?: string;
   date: string;
@@ -16,7 +18,8 @@ const GlassPositionCard: FC<GlassPositionCardProps> = ({
   company,
   description,
   imageSrc,
-  date,
+  start,
+  end,
   link,
 }) => {
   return (
@@ -35,7 +38,9 @@ const GlassPositionCard: FC<GlassPositionCardProps> = ({
               </h3>
               <p className='text-xl font-semibold font-cormorant'>{company}</p>
               <p className='text-lg font-cormorant'>{description}</p>
-              <p className='text-md mt-2 font-cormorant'>{date}</p>
+              <p className='text-md mt-2 font-cormorant'>
+                {start} - {end}
+              </p>
             </div>
           </div>
         </div>

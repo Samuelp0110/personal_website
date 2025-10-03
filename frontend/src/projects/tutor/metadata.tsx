@@ -7,6 +7,8 @@ const metadata: ProjectMetadata = {
   description:
     "A full-stack educational AI system that rewrites prompts to foster critical thinking instead of direct answers. Evaluated through a controlled experiment with measurable learning gains.",
   date: "2025-05-07",
+  start: "January 2025",
+  end: "May 2025",
   tags: [
     "AI in Education",
     "Data Science",

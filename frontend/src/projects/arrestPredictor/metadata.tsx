@@ -7,6 +7,8 @@ const metadata: ProjectMetadata = {
   description:
     "Explored NYPD vehicle stop data to predict arrest outcomes using ML classifiers. Showcased both predictive limitations and ethical implications.",
   date: "2025-05-14",
+  start: "January 2025",
+  end: "May 2025",
   tags: [
     "Data Science",
     "Machine Learning",

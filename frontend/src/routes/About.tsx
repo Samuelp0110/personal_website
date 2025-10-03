@@ -1,7 +1,6 @@
 import type { FC } from "react";
 import AboutMeGroupPhoto from "../assets/AboutMeGroupPhoto.jpg";
 import HeroHeader from "../components/HeroHeader";
-import LinkPillHeader from "../components/LinkPullHeader";
 
 const About: FC = () => {
   return (
@@ -11,7 +10,7 @@ const About: FC = () => {
 
       {/* Bio Text Section */}
       <section className='px-18 py-15 flex justify-center'>
-        <div className='max-w-[1000px] text-justify flex flex-col gap-4 text-[20px] md:text-[24px] font-cormorant font-normal text-background'>
+        <div className='max-w-[1000px] text-justify flex flex-col gap-4 text-[20px] md:text-[24px] font-cormorant font-normal text-rfg'>
           <p>
             Hello there! I’m Sam Preston. I have a Master's of Computer Science
             in Software Development (2025) and a Bachelor's of Science in
@@ -21,7 +20,7 @@ const About: FC = () => {
               href='https://www.stevens.edu/'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-accent font-bold underline hover:text-body transition-colors duration-300'
+              className='text-rtertiary font-bold underline hover:text-rprimary transition-colors duration-300'
             >
               Stevens Institute of Technology
             </a>{" "}
@@ -41,7 +40,7 @@ const About: FC = () => {
               href='https://www.stevens.edu/news/ssb-students-showcase-expertise-at-innovation-expo-2024'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-accent font-bold underline hover:text-body transition-colors duration-300'
+              className='text-rtertiary font-bold underline hover:text-rprimary transition-colors duration-300'
             >
               place second
             </a>{" "}
@@ -56,17 +55,6 @@ const About: FC = () => {
         </div>
       </section>
 
-      <LinkPillHeader
-        subtitle='Useful Links'
-        links={[
-          { label: "CV", url: "/pdf/samuelPrestonCV" },
-          {
-            label: "LinkedIn",
-            url: "https://www.linkedin.com/in/SamuelRMPreston/",
-          },
-          { label: "GitHub", url: "https://github.com/Samuelp0110" },
-        ]}
-      />
       {/* Image Section */}
       <section className='w-full px-6 py-14 flex justify-center'>
         <div className='w-full max-w-[1000px]'>

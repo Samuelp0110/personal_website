@@ -8,7 +8,9 @@ const metadata: PositionMetadata = {
   company: "Asset Based Lending LLC",
   description:
     "My experience as an operations analyst intern at Asset Based Lending LLC",
-  date: "December 2021 - June 2022",
+  date: "2022-06-01",
+  start: "December 2021",
+  end: "June 2022",
   tags: [
     "AI in Education",
     "Data Science",

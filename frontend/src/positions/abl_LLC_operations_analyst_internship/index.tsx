@@ -70,4 +70,4 @@ const SamsungPage = () => {
   );
 };
 
-export default SamsungPage;
+// export default SamsungPage;

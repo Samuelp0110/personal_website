@@ -10,12 +10,12 @@
 
   /* Regal */
 
-  --color-rfg: #11100F;        /* Foreground / Text */
-  --color-rbg: #EFE9E1;        /* Background */
-  --color-rprimary: #5D1C34;   /* Primary (burgundy) */
-  --color-rsecondary: #A67D44; /* Secondary (gold) */
-  --color-rneutral: #CDBCAB;   /* Neutral (beige) */
-  --color-rtertiary: #899481;  /* Tertiary (sage green) */
+  --color-rfg: #192524;        /* Foreground / Text */
+  --color-rbg: #efece9;        /* Background */
+  --color-rprimary: #3c5759;   /* Primary (burgundy) */
+  --color-rsecondary: #d1ebdb; /* Secondary (gold) */
+  --color-rneutral: #d0d5ce;   /* Neutral (beige) */
+  --color-rtertiary: #959d90;  /* Tertiary (sage green) */
 
   --font-cormorant: "Cormorant Garamond", serif;
   --font-roboto: "Roboto", serif;

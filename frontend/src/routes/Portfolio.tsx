@@ -1,76 +1,55 @@
 import type { FC } from "react";
-import GlassProjectCard from "../components/projectBlocks/GlassProjectCard";
 import projectsMetadata from "../data/projectsMetadata";
 import positionsMetadata from "../data/positionsMetadata";
-// import HeroHeader from "../components/HeroHeader";
-import GlassWorkCard from "../components/positionBlocks/GlassPositionCard";
+import HeroHeader from "../components/HeroHeader";
+import PositionCard from "../components/positionBlocks/PositionCard";
+import ProjectCard from "../components/projectBlocks/ProjectCard";
 
 const ProjectsPage: FC = () => {
   return (
-    <main className='w-full min-h-screen flex flex-col items-center'>
+    <main className='w-full min-h-screen flex flex-col items-center mb-12'>
       {/* Hero Banner */}
-      {/* <HeroHeader title='My Work' /> */}
-
-      <section className='w-full max-w-[1440px] px-6 md:px-24 mt-16'>
-        <h2 className='text-center text-[36px] font-cormorant font-bold text-background mb-8'>
+      <HeroHeader title='My Portfolio' />
+      {/* Professional Work Section */}
+      <section className='w-full max-w-[1000px] px-6'>
+        <h2 className='text-center text-[36px] font-cormorant font-bold text-background mb-8 mt-4'>
           Professional Work
         </h2>
-        <div
-          className='grid justify-items-center gap-12'
-          style={{
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          }}
-        >
+        <div className='grid md:grid-cols-2 justify-items-center gap-4'>
           {positionsMetadata.map((position) => (
-            <GlassWorkCard
+            <PositionCard
               key={position.slug}
               title={position.title}
               company={position.company}
+              start={position.start}
+              end={position.end}
               description={position.description}
               imageSrc={position.image}
-              imageAlt={position.title}
-              date={position.date}
-              link={`/positions/${position.slug}`}
+              link={`/positions/${position.slug}`} // or project.pdfUrl if preferred
             />
           ))}
         </div>
       </section>
 
       {/* Projects Grid - dynamically rendered */}
-      <section className='w-full max-w-[1440px] px-6 md:px-24 mt-16'>
-        <h2 className='text-center text-[36px] font-cormorant font-bold text-background mb-8'>
+      <section className='w-full max-w-[1000px] px-6'>
+        <h2 className='text-center text-[36px] font-cormorant font-bold text-background mb-8 mt-4'>
           Project Gallery
         </h2>
-        <div
-          className='grid justify-items-center gap-12'
-          style={{
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          }}
-        >
-          {projectsMetadata.map((proj) => (
-            <GlassProjectCard
-              key={proj.slug}
-              title={proj.title}
-              description={proj.description}
-              imageSrc={proj.image}
-              imageAlt={proj.title}
-              date={proj.date}
-              link={`/projects/${proj.slug}`}
+        <div className='grid md:grid-cols-2 justify-items-center gap-4'>
+          {projectsMetadata.map((project) => (
+            <ProjectCard
+              key={project.slug}
+              title={project.title}
+              description={project.description}
+              imageSrc={project.image}
+              start={project.start}
+              end={project.end}
+              link={`/projects/${project.slug}`} // or project.pdfUrl if preferred
             />
           ))}
         </div>
       </section>
-
-      {/* Back to Top */}
-      <div className='py-12'>
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className='flex items-center gap-2 px-4 py-2 text-[24px] text-[#0C0B22] font-cormorant border-2 border-[#0C0B22] rounded-lg hover:bg-[#c2e0d2]/40 transition-all'
-        >
-          Back to Top
-          <span className='-translate-y-[2px]'>⬆</span>
-        </button>
-      </div>
     </main>
   );
 };
