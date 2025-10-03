@@ -7,7 +7,6 @@ import ConnectModal from "./ConnectModal";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // Tracks mobile menu toggle
-  // const [isModalOpen, setIsModalOpen] = useState(false);
 
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -76,9 +75,9 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             aria-label='Toggle Menu'
-            className='text-body border-2 border-body rounded px-1 py-1 text-2xl'
+            className='text-rfg border-2 border-rfg rounded px-1 py-1 text-2xl'
           >
-            {isOpen ? <X color='#0C0B22' /> : <Menu color='#0C0B22' />}
+            {isOpen ? <X /> : <Menu />}
           </button>
         </div>
       </div>

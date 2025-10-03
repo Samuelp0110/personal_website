@@ -75,8 +75,8 @@ const About: FC = () => {
       </section>
 
       {/* Image Section */}
-      <section className='w-full max-w-[1000px] px-6 mb-12'>
-        <div className='grid md:grid-cols-2 gap-6 justify-items-center'>
+      <section className='w-full max-w-[1200px] px-6'>
+        <div className='grid lg:grid-cols-2 gap-6 justify-items-center'>
           {photos.map(({ imageSrc, imageAlt, title, description }, index) => (
             <PhotoCard
               key={index}
