@@ -1,6 +1,9 @@
 import type { FC } from "react";
 import AboutMeGroupPhoto from "../assets/AboutMeGroupPhoto.jpg";
 import aboutSoccer from "../assets/aboutSoccer.webp";
+import aboutRocco from "../assets/aboutAward.jpeg";
+import aboutFleco from "../assets/aboutFleco.jpg";
+import aboutCooking from "../assets/aboutCooking.jpg";
 import HeroHeader from "../components/HeroHeader";
 import PhotoCard from "../components/PhotoCard";
 
@@ -18,6 +21,27 @@ const photos = [
     imageAlt: "Group Soccer Photo",
     description:
       "Having played soccer since I was 3, I try to stay active with local adult leagues like Hive in Hoboken, NJ",
+  },
+  {
+    title: "Ansary Competition",
+    imageSrc: aboutFleco,
+    imageAlt: "Fleco Photo",
+    description:
+      "I participated in the Ansary Competition presenting the app Fleco, where I am my teammates won 2nd place",
+  },
+  {
+    title: "Appreciation Award",
+    imageSrc: aboutRocco,
+    imageAlt: "Award Photo",
+    description:
+      "I strive to recognize those who have excelled in their area, which is why I was able to grant my friend a certificate of appreciation formally for his first year as a professor ",
+  },
+  {
+    title: "Cooking Alot",
+    imageSrc: aboutCooking,
+    imageAlt: "Shakshuka Photo",
+    description:
+      "I love to cook all types of food. Shown here is my attempt at making Shakshuka",
   },
 ];
 
