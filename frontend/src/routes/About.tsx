@@ -1,10 +1,29 @@
 import type { FC } from "react";
 import AboutMeGroupPhoto from "../assets/AboutMeGroupPhoto.jpg";
+import aboutSoccer from "../assets/aboutSoccer.webp";
 import HeroHeader from "../components/HeroHeader";
+import PhotoCard from "../components/PhotoCard";
+
+const photos = [
+  {
+    title: "Masters Graduation",
+    imageSrc: AboutMeGroupPhoto,
+    imageAlt: "Graduation Group Photo",
+    description:
+      "Graduated with my Masters in Computer Science alongside my peers",
+  },
+  {
+    title: "Hive Soccer League",
+    imageSrc: aboutSoccer,
+    imageAlt: "Group Soccer Photo",
+    description:
+      "Having played soccer since I was 3, I try to stay active with local adult leagues like Hive in Hoboken, NJ",
+  },
+];
 
 const About: FC = () => {
   return (
-    <main className=' w-full overflow-hidden flex flex-col items-center'>
+    <main className='w-full min-h-screen flex flex-col items-center mb-12'>
       {/* Hero Section */}
       <HeroHeader title='Creative. Inquisitive. Analytical' />
 
@@ -56,13 +75,17 @@ const About: FC = () => {
       </section>
 
       {/* Image Section */}
-      <section className='w-full px-6 py-14 flex justify-center'>
-        <div className='w-full max-w-[1000px]'>
-          <img
-            src={AboutMeGroupPhoto}
-            alt='Sam Preston with friends at graduation'
-            className='w-full rounded-2xl max-h-[600px] object-cover'
-          />
+      <section className='w-full max-w-[1000px] px-6 mb-12'>
+        <div className='grid md:grid-cols-2 gap-6 justify-items-center'>
+          {photos.map(({ imageSrc, imageAlt, title, description }, index) => (
+            <PhotoCard
+              key={index}
+              title={title}
+              imageSrc={imageSrc}
+              imageAlt={imageAlt}
+              description={description}
+            />
+          ))}
         </div>
       </section>
     </main>
