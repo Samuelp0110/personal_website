@@ -25,32 +25,37 @@ const PositionCard: FC<PositionCardProps> = ({
   link,
 }) => {
   return (
-    <div className='w-full max-w-[400px] min-w-[350px] flex'>
-      <Link to={link}>
-        <div className='w-full overflow-hidden rounded-3xl font-cormorant bg-rtertiary shadow-[0_2px_10px] shadow-rtertiary'>
-          <div className='w-full flex flex-col justify-center p-4'>
-            <div className='w-full flex flex-col justify-end items-center rounded-xl bg-cover bg-center'>
-              <div className='w-full min-w-[300] max-w-[380px] overflow-hidden rounded-2xl shadow-[0_2px_10px] shadow-blackA4'>
-                <AspectRatio.Root ratio={4 / 3}>
-                  <img
-                    className='size-full object-cover'
-                    src={imageSrc}
-                    alt={imageAlt}
-                  />
-                </AspectRatio.Root>
-              </div>
+    <div className='w-full max-w-[400px] min-w-[350px] p-1'>
+      <Link
+        to={link}
+        className='block overflow-hidden rounded-3xl bg-rtertiary font-cormorant shadow-[0_2px_10px] shadow-rtertiary transition-transform duration-300 hover:scale-[1.02]'
+      >
+        <div className='flex flex-col p-4 gap-3'>
+          {/* Image */}
+          <div className='overflow-hidden rounded-2xl shadow-[0_2px_10px] shadow-blackA4'>
+            <AspectRatio.Root ratio={4 / 3}>
+              <img
+                className='w-full h-full object-cover'
+                src={imageSrc}
+                alt={imageAlt}
+              />
+            </AspectRatio.Root>
+          </div>
 
-              <h2 className='text-3xl mt-2 text-center font-bold text-rbg'>
-                {title}
-              </h2>
-              <h2 className='text-2xl text-center font-semibold text-rbg/90'>
-                {company}
-              </h2>
-              <p className='text-lg font-semibold text-rbg/80'>{description}</p>
+          {/* Text Content */}
+          <div className='flex flex-col items-center text-center text-rbg'>
+            <h2 className='text-3xl font-bold'>{title}</h2>
+            {company && (
+              <h3 className='text-2xl font-semibold text-rbg/90'>{company}</h3>
+            )}
+            {description && (
+              <p className='text-lg font-medium text-rbg/80'>{description}</p>
+            )}
+            {(start || end) && (
               <p className='text-lg font-semibold text-rsecondary'>
-                {start} - {end}
+                {start} – {end}
               </p>
-            </div>
+            )}
           </div>
         </div>
       </Link>

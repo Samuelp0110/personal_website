@@ -53,7 +53,7 @@ const About: FC = () => {
 
       {/* Bio Text Section */}
       <section className='px-18 py-15 flex justify-center'>
-        <div className='max-w-[1000px] text-justify flex flex-col gap-4 text-[20px] md:text-[24px] font-cormorant font-normal text-rfg'>
+        <div className='max-w-[1000px] flex flex-col gap-4 text-lg md:text-2xl font-cormorant font-normal text-rfg'>
           <p>
             Hello there! I’m Sam Preston. I have a Master's of Computer Science
             in Software Development (2025) and a Bachelor's of Science in
