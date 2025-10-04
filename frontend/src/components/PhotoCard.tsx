@@ -15,7 +15,7 @@ const PhotoCard: FC<PhotoCardProps> = ({
   imageAlt = "Position Reference Image",
 }) => {
   return (
-    <div className='w-full max-w-[500px] min-w-[450px] p-1'>
+    <div className='w-full max-w-[500px] min-w-[300px] p-1'>
       <div className='overflow-hidden rounded-3xl font-cormorant bg-rprimary shadow-[0_2px_10px] shadow-rtertiary'>
         <div className='flex flex-col p-4 gap-4'>
           {/* Image container */}

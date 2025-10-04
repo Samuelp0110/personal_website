@@ -15,7 +15,7 @@ const ProjectsPage: FC = () => {
         <h2 className='text-center text-[36px] font-cormorant font-bold text-background mb-8 mt-4'>
           Professional Work
         </h2>
-        <div className='grid md:grid-cols-2 justify-items-center gap-4'>
+        <div className='grid md:grid-cols-2 justify-items-center gap-4 p-1'>
           {positionsMetadata.map((position) => (
             <PositionCard
               key={position.slug}
@@ -36,7 +36,7 @@ const ProjectsPage: FC = () => {
         <h2 className='text-center text-[36px] font-cormorant font-bold text-background mb-8 mt-4'>
           Project Gallery
         </h2>
-        <div className='grid md:grid-cols-2 justify-items-center gap-4'>
+        <div className='grid md:grid-cols-2 justify-items-center gap-4 p-1'>
           {projectsMetadata.map((project) => (
             <ProjectCard
               key={project.slug}
