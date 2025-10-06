@@ -6,14 +6,23 @@ import aboutFleco from "../assets/aboutFleco.jpg";
 import aboutCooking from "../assets/aboutCooking.jpg";
 import HeroHeader from "../components/HeroHeader";
 import PhotoCard from "../components/PhotoCard";
+import {
+  MapPin,
+  GraduationCap,
+  BriefcaseBusiness,
+  MoveRight,
+  Sparkle,
+} from "lucide-react";
+import ConnectModal from "../components/Navigation/ConnectModal";
+import { Link } from "react-router";
 
 const photos = [
   {
-    title: "Masters Graduation",
+    title: "Master's Graduation",
     imageSrc: AboutMeGroupPhoto,
     imageAlt: "Graduation Group Photo",
     description:
-      "Graduated with my Masters in Computer Science alongside my peers",
+      "Graduated with my Master's in Computer Science alongside my peers",
   },
   {
     title: "Hive Soccer League",
@@ -27,7 +36,7 @@ const photos = [
     imageSrc: aboutFleco,
     imageAlt: "Fleco Photo",
     description:
-      "I participated in the Ansary Competition presenting the app Fleco, where I am my teammates won 2nd place",
+      "I participated in the Ansary Competition presenting the app Fleco, where I and my teammates won 2nd place",
   },
   {
     title: "Appreciation Award",
@@ -37,11 +46,57 @@ const photos = [
       "I strive to recognize those who have excelled in their area, which is why I was able to grant my friend a certificate of appreciation formally for his first year as a professor ",
   },
   {
-    title: "Cooking Alot",
+    title: "Cooking a Lot",
     imageSrc: aboutCooking,
     imageAlt: "Shakshuka Photo",
     description:
       "I love to cook all types of food. Shown here is my attempt at making Shakshuka",
+  },
+];
+
+const skills = [
+  { skill: "MS Office" },
+  { skill: "Lucidchart" },
+  { skill: "Jira" },
+  { skill: "Python" },
+  { skill: "SQL" },
+  { skill: "Machine Learning" },
+  { skill: "Generative AI" },
+  { skill: "React" },
+  { skill: "Typescript" },
+  { skill: "TailwindCSS" },
+];
+
+const services = [
+  { service: "AI Agents" },
+  { service: "Gen AI Applications" },
+  { service: "Business Analytics" },
+  { service: "Business Development" },
+];
+
+const callOuts = [
+  { main: "4+", sub: "Years of Experience" },
+  { main: "20+", sub: "Projects Completed" },
+  { main: "10+", sub: "Happy Clients" },
+  { main: "5+", sub: "Something Something" },
+];
+
+const tags = [
+  {
+    icon: <Sparkle />,
+    text: "IT Consultant",
+  },
+  {
+    icon: <GraduationCap />,
+    text: "M.S. Computer Science - B.S. Business Science",
+  },
+  {
+    icon: <MapPin />,
+    text: "New York City Area",
+  },
+  {
+    icon: <BriefcaseBusiness />,
+    text: "1+ Years of Professional Experience",
   },
 ];
 
@@ -50,6 +105,93 @@ const About: FC = () => {
     <main className='w-full min-h-screen flex flex-col items-center mb-12'>
       {/* Hero Section */}
       <HeroHeader title='Creative. Inquisitive. Analytical' />
+      <section className='max-w-[1000px] flex flex-col justify-center my-4 mb-10 mx-2'>
+        <div className='max-w-[1000px] flex flex-col md:flex-row justify-center gap-4'>
+          <div className='min-w-sm max-w-xl w-full flex-col p-8 '>
+            {/* Intro */}
+            <div className='text-5xl mb-4 font-semibold'>
+              Hi, I'm{" "}
+              <span className='text-transparent bg-clip-text bg-gradient-to-r from-rfg via-rtertiary to-rprimary'>
+                Sam Preston
+              </span>
+            </div>
+            {/* Tags */}
+            <div className='mb-4'>
+              {tags.map(({ icon, text }) => (
+                <a className='flex gap-2 py-0.5'>
+                  <span className='text-rprimary'>{icon}</span>
+                  <span className='text-rtertiary'>{text}</span>
+                </a>
+              ))}
+            </div>
+            {/* Paragraph */}
+            <div className='flex flex-col gap-2 text-rfg'>
+              I have a passion for solving problems. It gives me the space I
+              need to think creatively, and keep learning every day. I’m driven
+              by curiosity, whether it’s exploring a new industry, uncovering
+              insights through analysis, or finding smarter ways to use
+              technology. What excites me most is connecting analytics with
+              creative thinking to make sense of complexity and design practical
+              solutions. I enjoy diving into challenges that blend strategy and
+              exploration, where every answer leads to a new question. For me,
+              consulting is about staying curious, adaptable, and always ready
+              to learn something new.
+            </div>
+            {/* Connect / Projects buttons */}
+            <div className='w-full flex gap-2 py-2 mt-3'>
+              <div className=''>
+                <ConnectModal classname='bg-rtertiary text-rbg text-xl rounded-full cursor-pointer duration-200 hover:shadow-sm shadow-rfg py-1 px-4 font-bold font-cormorant' />
+              </div>
+              <div className='mt-1'>
+                <Link
+                  to='/Portfolio'
+                  className=' text-rprimary text-xl rounded-full cursor-pointer duration-200 hover:shadow-sm shadow-rprimary py-1 px-4 font-bold font-cormorant'
+                >
+                  See my Portfolio
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className='min-w-sm max-w-xl w-full flex-col px-8 md:py-18'>
+            {/* Skills */}
+            <div className=''>
+              <div className='text-xl font-semibold'>Key Skills</div>
+              <div className='flex flex-wrap '>
+                {skills.map(({ skill }) => (
+                  <div className='flex px-3 bg-linear-to-br from-rsecondary via-rneutral to-rtertiary m-1 rounded-full shadow-[0_2px_2px] shadow-rtertiary transition-transform duration-150 hover:scale-[1.08] cursor-default'>
+                    <a className='text-rfg'>{skill}</a>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Services */}
+            <div className='my-2'>
+              <div className='text-xl font-semibold mb-2'>Services</div>
+              {services.map(({ service }) => (
+                <div className='flex items-center gap-1 pb-1'>
+                  <span className='text-rprimary'>
+                    <MoveRight size={16} />
+                  </span>
+                  <a>{service}</a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className='flex flex-wrap justify-between gap-4 mx-8'>
+          {callOuts.map(({ main, sub }) => (
+            <div
+              key={main}
+              className='flex-1 basis-[150px] max-w-[200px] min-w-[150px]'
+            >
+              <div className='flex flex-col gap-1 my-2 py-3 px-4 rounded-2xl bg-linear-to-br from-rsecondary via-rneutral to-rtertiary shadow-[0px_4px_8px] shadow-rtertiary transition-transform duration-150 hover:scale-[1.08] cursor-default'>
+                <a className='pl-2 text-3xl text-rprimary'>{main}</a>
+                <a className='text-rfg'>{sub}</a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Bio Text Section */}
       <section className='px-18 py-15 flex justify-center'>

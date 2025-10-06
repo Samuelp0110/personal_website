@@ -16,9 +16,8 @@ const HeroSection: FC = () => {
         <div className='flex flex-col gap-4 text-center font-cormorant text-rfg'>
           <h1 className='text-4xl font-bold'>Hello, I’m Sam Preston</h1>
           <p className='text-3xl font-semibold leading-snug'>
-            With an inquisitive personality and a creative spirit, I find myself
-            drawn to almost anything where I have the opportunity to make a
-            change.
+            With an inquisitive personality and a creative spirit, I am drawn to
+            almost anything where I have the opportunity to make a change.
           </p>
         </div>
       </div>

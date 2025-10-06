@@ -11,11 +11,10 @@ const latestPosition = positionsMetadata.slice(0, 1);
 
 const Home: FC = () => {
   return (
-    <main className='flex flex-col items-center justify-center font-cormorant'>
+    <main className='w-full flex flex-col items-center justify-center font-roboto'>
       {/* Content Section */}
       <HeroSection />
       <section className='w-full py-8 flex flex-wrap gap-12 justify-center items-start'>
-        {/* Latest or Current Position */}
         <div className='flex flex-col flex-wrap justify-center gap-2 mb-2 p-1'>
           <div className='w-fit bg-rneutral text-rfg text-lg font-bold px-4 py-1 rounded-full shadow-md backdrop-blur-md'>
             Latest Position
@@ -33,7 +32,6 @@ const Home: FC = () => {
             />
           ))}
         </div>
-        {/* Latest or Current Project */}
         <div className='flex flex-col flex-wrap justify-center gap-2 mb-2 p-1'>
           <div className='w-fit bg-rsecondary text-rfg text-lg font-bold px-4 py-1 rounded-full shadow-md backdrop-blur-md'>
             Recent Project

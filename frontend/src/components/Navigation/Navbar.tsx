@@ -41,13 +41,13 @@ export default function Navbar() {
         bg-rtertiary shadow-lg ring-1 ring-rfg/5
         px-6 py-3`}
     >
-      <div className='max-w-[1440px] mx-auto flex items-center justify-between'>
+      <div className='max-w-[1200px] mx-auto flex items-center justify-between'>
         {/* Logo that links to homepage */}
         <Link
           to='/'
           className='text-3xl font-bold font-cormorant text-rbg'
         >
-          Samuel Preston
+          Sam Preston
         </Link>
 
         {/* Desktop Nav */}
@@ -67,7 +67,7 @@ export default function Navbar() {
               Portfolio
             </Link>
           </div>
-          <ConnectModal />
+          <ConnectModal classname='bg-rbg text-rprimary text-xl rounded-full cursor-pointer duration-200 hover:shadow-sm shadow-rprimary py-1 px-4 font-bold font-cormorant' />
         </div>
 
         {/* Mobile Toggle Button (hamburger icon) */}

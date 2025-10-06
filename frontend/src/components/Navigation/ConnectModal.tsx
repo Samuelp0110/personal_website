@@ -1,5 +1,6 @@
 import { Github, Mail, Phone, Linkedin, X } from "lucide-react";
 import { Dialog } from "radix-ui";
+import type { FC } from "react";
 
 const links = [
   {
@@ -24,20 +25,26 @@ const links = [
   },
 ];
 
-const ConnectModal = () => {
+type ConnectModalProps = {
+  classname?: string;
+};
+
+const ConnectModal: FC<ConnectModalProps> = ({ classname }) => {
   return (
     <div>
       <Dialog.Root>
         <Dialog.Trigger asChild>
-          <button className='bg-rbg text-rprimary text-xl rounded-full cursor-pointer duration-200 hover:shadow-sm shadow-rprimary py-1 px-4 font-bold font-cormorant'>
-            Let's Connect
+          <button
+            className={`${classname}`}
+          >
+            Contact
           </button>
         </Dialog.Trigger>
         <Dialog.Portal>
           <Dialog.Overlay className='fixed inset-0 bg-black/50 data-[state=open]:animate-overlayShow' />
           <Dialog.Content className='fixed left-1/2 top-1/2 w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-xl bg-rneutral p-4 shadow-[var(--shadow-6)] focus:outline-none data-[state=open]:animate-contentShow'>
             <Dialog.Title className='mb-4 text-xl font-medium text-rfg'>
-              Let's Connect
+              Contact
             </Dialog.Title>
             <ul className='space-y-3'>
               {links.map(({ icon, label, href }) => (

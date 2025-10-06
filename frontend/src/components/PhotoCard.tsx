@@ -19,7 +19,7 @@ const PhotoCard: FC<PhotoCardProps> = ({
       <div className='overflow-hidden rounded-3xl font-cormorant bg-rprimary shadow-[0_2px_10px] shadow-rtertiary'>
         <div className='flex flex-col p-4 gap-4'>
           {/* Image container */}
-          <div className='w-full overflow-hidden rounded-2xl shadow-[0_2px_10px] shadow-blackA4'>
+          <div className='w-full overflow-hidden rounded-2xl shadow-[0_2px_10px] shadow-rfg'>
             <AspectRatio.Root ratio={4 / 3}>
               <img
                 className='w-full h-full object-cover'
