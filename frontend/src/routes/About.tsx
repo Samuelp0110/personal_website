@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import ConnectModal from "../components/Navigation/ConnectModal";
 import { Link } from "react-router";
+import { motion } from "framer-motion";
 
 const photos = [
   {
@@ -179,16 +180,23 @@ const About: FC = () => {
           </div>
         </div>
         <div className='flex flex-wrap justify-between gap-4 mx-8'>
-          {callOuts.map(({ main, sub }) => (
-            <div
+          {callOuts.map(({ main, sub }, index) => (
+            <motion.div
               key={main}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeOut",
+                delay: index * 0.15, // Staggered delay
+              }}
               className='flex-1 basis-[150px] max-w-[200px] min-w-[150px]'
             >
-              <div className='flex flex-col gap-1 my-2 py-3 px-4 rounded-2xl bg-linear-to-br from-rsecondary via-rneutral to-rtertiary shadow-[0px_4px_8px] shadow-rtertiary transition-transform duration-150 hover:scale-[1.08] cursor-default'>
+              <div className='flex flex-col gap-1 my-2 py-3 px-4 rounded-2xl bg-gradient-to-br from-rsecondary via-rneutral to-rtertiary shadow-[0px_4px_8px] shadow-rtertiary transition-transform duration-150 hover:scale-[1.08] cursor-default'>
                 <a className='pl-2 text-3xl text-rprimary'>{main}</a>
                 <a className='text-rfg'>{sub}</a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
