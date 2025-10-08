@@ -159,7 +159,7 @@ const About: FC = () => {
               <div className='text-xl font-semibold'>Key Skills</div>
               <div className='flex flex-wrap '>
                 {skills.map(({ skill }) => (
-                  <div className='flex px-3 bg-linear-to-br from-rsecondary via-rneutral to-rtertiary m-1 rounded-full shadow-[0_2px_2px] shadow-rtertiary transition-transform duration-150 hover:scale-[1.08] cursor-default'>
+                  <div className='flex px-3 bg-linear-to-br from-rsecondary to-rneutral m-1 rounded-full shadow-[0_1px_2px] shadow-rtertiary transition-transform duration-150 hover:scale-[1.08] cursor-default'>
                     <a className='text-rfg'>{skill}</a>
                   </div>
                 ))}
@@ -192,7 +192,7 @@ const About: FC = () => {
               }}
               className='flex-1 basis-[150px] max-w-[200px] min-w-[150px]'
             >
-              <div className='flex flex-col gap-1 my-2 py-3 px-4 rounded-2xl bg-gradient-to-br from-rsecondary via-rneutral to-rtertiary shadow-[0px_4px_8px] shadow-rtertiary transition-transform duration-150 hover:scale-[1.08] cursor-default'>
+              <div className='flex flex-col gap-1 my-2 py-3 px-4 rounded-2xl bg-linear-to-br from-rsecondary to-rneutral shadow-[0px_4px_8px] shadow-rtertiary transition-transform duration-150 hover:scale-[1.08] cursor-default'>
                 <a className='pl-2 text-3xl text-rprimary'>{main}</a>
                 <a className='text-rfg'>{sub}</a>
               </div>
@@ -202,7 +202,7 @@ const About: FC = () => {
       </section>
 
       {/* Bio Text Section */}
-      <section className='px-18 py-15 flex justify-center'>
+      {/* <section className='px-18 py-15 flex justify-center'>
         <div className='max-w-[1000px] flex flex-col gap-4 text-lg md:text-2xl text-center font-cormorant font-normal text-rfg'>
           <p>
             Hello there! I’m Sam Preston. I have a Master's of Computer Science
@@ -246,10 +246,10 @@ const About: FC = () => {
             world of 3D design, whether it be for printing or digital use.
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* Image Section */}
-      <section className='w-full max-w-[1200px] px-6'>
+      <section className='w-full max-w-[1000px] px-6'>
         <div className='grid lg:grid-cols-2 gap-6 justify-items-center'>
           {photos.map(({ imageSrc, imageAlt, title, description }, index) => (
             <PhotoCard

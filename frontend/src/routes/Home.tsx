@@ -1,20 +1,20 @@
 import type { FC } from "react";
 import HeroSection from "../components/HeroSection";
-import ProjectCard from "../components/projectBlocks/ProjectCard";
-import projectsMetadata from "../data/projectsMetadata";
-import PositionCard from "../components/positionBlocks/PositionCard";
-import positionsMetadata from "../data/positionsMetadata";
+// import ProjectCard from "../components/projectBlocks/ProjectCard";
+// import projectsMetadata from "../data/projectsMetadata";
+// import PositionCard from "../components/positionBlocks/PositionCard";
+// import positionsMetadata from "../data/positionsMetadata";
 
 // Show top 3
-const recentProjects = projectsMetadata.slice(0, 1);
-const latestPosition = positionsMetadata.slice(0, 1);
+// const recentProjects = projectsMetadata.slice(0, 1);
+// const latestPosition = positionsMetadata.slice(0, 1);
 
 const Home: FC = () => {
   return (
     <main className='w-full flex flex-col items-center justify-center font-roboto'>
       {/* Content Section */}
       <HeroSection />
-      <section className='w-full py-8 flex flex-wrap gap-12 justify-center items-start'>
+      {/* <section className='w-full py-8 flex flex-wrap gap-12 justify-center items-start'>
         <div className='flex flex-col flex-wrap justify-center gap-2 mb-2 p-1'>
           <div className='w-fit bg-rneutral text-rfg text-lg font-bold px-4 py-1 rounded-full shadow-md backdrop-blur-md'>
             Latest Position
@@ -48,7 +48,7 @@ const Home: FC = () => {
             />
           ))}
         </div>
-      </section>
+      </section> */}
     </main>
   );
 };

@@ -4,8 +4,9 @@ import Footer from "../components/Navigation/Footer";
 // import N8nChatbot from "../components/N8nChatbot";
 
 const RootLayout = () => {
+  
   return (
-    <div className='min-h-screen flex flex-col bg-rbg'>
+    <div className='min-h-screen flex flex-col bg-rbg font-roboto'>
       <Navbar />
       <main className='flex-grow '>
         <Outlet />
