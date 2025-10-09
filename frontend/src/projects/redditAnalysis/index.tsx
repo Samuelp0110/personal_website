@@ -42,7 +42,6 @@ const RedditPage = () => {
         imageAlt="Bar chart comparing the accuracy, precision, recall, and F1 score for Logistic Regression, Naive Bayes, Linear SVM, Random Forest, and MLP"
         title="Which Model Performed Best?"
         text="The Multi-Layer Perceptron (MLP) achieved the highest F1 score at 95.78%, outperforming all other traditional classifiers. Random Forest and SVM were strong contenders, while Naive Bayes had high recall but low precision."
-        reverse
       />
 
       <ImageGalleryRow
