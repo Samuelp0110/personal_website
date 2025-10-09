@@ -175,7 +175,7 @@ const About: FC = () => {
                 {skills.map(({ skill, tools }) => (
                   <Popover.Root>
                     <Popover.Trigger asChild>
-                      <button className='flex px-3 py-0.5 bg-linear-to-br text-rfg from-rsecondary to-rneutral my-1 mx-2 rounded-full shadow-[0_1px_2px] shadow-rtertiary transition-transform duration-150 hover:scale-[1.08] cursor-default'>
+                      <button className='flex px-3 py-0.5 bg-linear-to-br text-rfg from-rsecondary to-rneutral my-1 mx-2 rounded-full shadow-[0_1px_2px] shadow-rtertiary transition-transform duration-150 hover:scale-[1.08] cursor-pointer'>
                         {skill}
                       </button>
                     </Popover.Trigger>
