@@ -25,7 +25,7 @@ const Home: FC = () => {
           Analytical Thinker <br /> Software Developer <br /> Community Leader
         </h1>
         <h2 className='my-8 text-center mx-4 font-semibold text-rprimary font-cormorant text-lg md:text-2xl'>
-          Actively Seeking Employment Opportunities
+          Actively Seeking Employment Opportunities in a Tough Market
         </h2>
         <div className='mx-auto px-4 mt-16 grid grid-cols-1 font-cormorant md:grid-cols-2 gap-4 md:gap-8 max-w-5xl'>
           <Link to='/about'>
