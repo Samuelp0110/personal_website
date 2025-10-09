@@ -20,7 +20,7 @@ const Home: FC = () => {
       {/* Content Section */}
       {/* <HeroSection /> */}
 
-      <section className='mt-20'>
+      <section className='my-20'>
         <h1 className='font-cormorant font-bold text-4xl text-rprimary text-center md:text-6xl'>
           Analytical Thinker <br /> Software Developer <br /> Community Leader
         </h1>

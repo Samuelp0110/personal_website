@@ -84,7 +84,7 @@ export default function Navbar() {
 
       {/* Mobile Menu with Animation */}
       <div
-        className={`md:hidden transition-all duration-300 overflow-hidden flex flex-col items-center gap-4 ${
+        className={`md:hidden transition-all duration-300 overflow-hidden flex flex-col items-center gap-3 py-1 ${
           isOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
         }`}
       >
@@ -102,7 +102,7 @@ export default function Navbar() {
         >
           Portfolio
         </Link>
-        <ConnectModal />
+        <ConnectModal classname='bg-rbg text-rprimary text-xl rounded-full cursor-pointer duration-200 hover:shadow-sm shadow-rprimary py-1 px-4 font-bold font-cormorant' />
       </div>
     </nav>
   );

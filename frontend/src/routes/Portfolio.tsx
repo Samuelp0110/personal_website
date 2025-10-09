@@ -47,20 +47,33 @@ const ProjectsPage: FC = () => {
         className='w-full min-h-screen flex flex-col items-center px-4'
         defaultValue='past_roles'
       >
-        <Tabs.List className='flex flex-row flex-wrap justify-center gap-8 my-16 bg-rtertiary/20 p-4 rounded-2xl'>
+        <Tabs.List
+          className='flex flex-row flex-wrap justify-center 
+             gap-8 sm:gap-12 md:gap-16 
+             my-8 sm:my-12 md:my-16 
+             bg-rtertiary/20 p-2 sm:p-3 md:p-4 
+             rounded-2xl transition-all duration-300'
+        >
           <Tabs.Trigger
             value='past_roles'
-            className='min-w-[220px] text-center text-2xl font-semibold text-rprimary px-3 py-2 rounded-md 
-               transition-all duration-200 
+            className='min-w-[140px] sm:min-w-[180px] md:min-w-[220px] 
+               text-center text-lg sm:text-xl md:text-2xl 
+               font-semibold text-rprimary 
+               px-2 sm:px-3 md:px-4 py-1 sm:py-2 
+               rounded-md transition-all duration-200 
                data-[state=active]:bg-rprimary data-[state=active]:text-rbg 
                hover:bg-rprimary/10'
           >
             Past Roles
           </Tabs.Trigger>
+
           <Tabs.Trigger
             value='notable_projects'
-            className='min-w-[220px] text-center text-2xl font-semibold text-rprimary px-3 py-2 rounded-md 
-               transition-all duration-200 
+            className='min-w-[140px] sm:min-w-[180px] md:min-w-[220px] 
+               text-center text-lg sm:text-xl md:text-2xl 
+               font-semibold text-rprimary 
+               px-2 sm:px-3 md:px-4 py-1 sm:py-2 
+               rounded-md transition-all duration-200 
                data-[state=active]:bg-rprimary data-[state=active]:text-rbg 
                hover:bg-rprimary/10'
           >
@@ -195,10 +208,13 @@ const ProjectsPage: FC = () => {
                   <div className='min-w-[200px] max-w-[400px] overflow-hidden rounded-md shadow-[0_2px_10px] shadow-black my-4 transition-all duration-300 ease-out hover:scale-[1.1]'>
                     <AspectRatio.Root ratio={7 / 5}>
                       <img
-                        className='size-full object-cover '
+                        className='size-full object-cover blur-xs'
                         src={LoanOrigination}
                       />
                     </AspectRatio.Root>
+                    <div className='text-sm font-cormorant text-rprimary text-center'>
+                      Blurred For Privacy Reasons
+                    </div>
                   </div>
                 </div>
                 <p className='mb-1 text-base font-normal text-rfg/60 gap-1'>
