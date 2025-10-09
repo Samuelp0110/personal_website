@@ -77,9 +77,9 @@ const services = [
 
 const callOuts = [
   { main: "4+", sub: "Years of Experience" },
-  { main: "20+", sub: "Projects Completed" },
-  { main: "10+", sub: "Happy Clients" },
-  { main: "5+", sub: "Something Something" },
+  { main: "15+", sub: "Projects Completed" },
+  { main: "5+", sub: "Happy Clients" },
+  { main: "2", sub: "Degrees Earned" },
 ];
 
 const tags = [
