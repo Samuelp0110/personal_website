@@ -16,6 +16,7 @@ import {
 import ConnectModal from "../components/Navigation/ConnectModal";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
+import { Popover } from "radix-ui";
 
 const photos = [
   {
@@ -56,23 +57,37 @@ const photos = [
 ];
 
 const skills = [
-  { skill: "MS Office" },
-  { skill: "Lucidchart" },
-  { skill: "Jira" },
-  { skill: "Python" },
-  { skill: "SQL" },
-  { skill: "Machine Learning" },
-  { skill: "Generative AI" },
-  { skill: "React" },
-  { skill: "Typescript" },
-  { skill: "TailwindCSS" },
+  {
+    skill: "Data Analytics",
+    tools: ["Python", "Pandas", "Numpy", "Power BI", "SQL", "Excel"],
+  },
+  {
+    skill: "System Design",
+    tools: ["Lucidchart", "UML", "ER Diagrams", "AWS Architecture"],
+  },
+  {
+    skill: "Cloud Infrastructure",
+    tools: ["AWS", "Docker"],
+  },
+  {
+    skill: "Process Automation",
+    tools: ["n8n", "REST APIs"],
+  },
+  {
+    skill: "Web Development",
+    tools: ["React", "TypeScript", "TailwindCSS", "Express", "PostgreSQL"],
+  },
+  {
+    skill: "Technical & Business Communication",
+    tools: ["MS Office Suite"],
+  },
 ];
 
 const services = [
-  { service: "AI Agents" },
-  { service: "Gen AI Applications" },
-  { service: "Business Analytics" },
-  { service: "Business Development" },
+  { service: "Custom AI Agent Development" },
+  { service: "Generative AI Solutions & Prototyping" },
+  { service: "Data-Driven Business Analytics" },
+  { service: "Strategic Growth & Technology Advisory" },
 ];
 
 const callOuts = [
@@ -127,16 +142,15 @@ const About: FC = () => {
             </div>
             {/* Paragraph */}
             <div className='flex flex-col gap-2 text-rfg'>
-              I have a passion for solving problems. It gives me the space I
-              need to think creatively, and keep learning every day. I’m driven
-              by curiosity, whether it’s exploring a new industry, uncovering
-              insights through analysis, or finding smarter ways to use
-              technology. What excites me most is connecting analytics with
-              creative thinking to make sense of complexity and design practical
-              solutions. I enjoy diving into challenges that blend strategy and
-              exploration, where every answer leads to a new question. For me,
-              consulting is about staying curious, adaptable, and always ready
-              to learn something new.
+              I'm passionate about solving problems, it gives me the space to
+              think creatively and keep learning every day. My curiosity drives
+              me to explore new industries, uncover insights through analysis,
+              and find smarter ways to use technology. What excites me most is
+              connecting analytics with creative thinking to make sense of
+              complexity and design practical, actionable solutions. I thrive in
+              challenges that blend strategy and exploration, where every answer
+              leads to a new question. For me, consulting is about staying
+              curious, adaptable, and always ready to learn something new.
             </div>
             {/* Connect / Projects buttons */}
             <div className='w-full flex gap-2 py-2 mt-3'>
@@ -158,10 +172,35 @@ const About: FC = () => {
             <div className=''>
               <div className='text-xl font-semibold'>Key Skills</div>
               <div className='flex flex-wrap '>
-                {skills.map(({ skill }) => (
-                  <div className='flex px-3 bg-linear-to-br from-rsecondary to-rneutral m-1 rounded-full shadow-[0_1px_2px] shadow-rtertiary transition-transform duration-150 hover:scale-[1.08] cursor-default'>
-                    <a className='text-rfg'>{skill}</a>
-                  </div>
+                {skills.map(({ skill, tools }) => (
+                  <Popover.Root>
+                    <Popover.Trigger asChild>
+                      <button className='flex px-3 py-0.5 bg-linear-to-br text-rfg from-rsecondary to-rneutral my-1 mx-2 rounded-full shadow-[0_1px_2px] shadow-rtertiary transition-transform duration-150 hover:scale-[1.08] cursor-default'>
+                        {skill}
+                      </button>
+                    </Popover.Trigger>
+                    <Popover.Portal>
+                      <Popover.Content className='text-rfg bg-rbg/40 backdrop-blur-xl p-3 rounded-md text-sm  shadow-[0_1px_10px] shadow-rtertiary'>
+                        <p className='font-semibold text-center mb-2'>
+                          Technical Tools
+                        </p>
+                        <div className='max-w-[150px] flex flex-wrap justify-center gap-y-1 text-center'>
+                          {tools.map((tool, index) => (
+                            <span
+                              key={tool}
+                              className='flex items-center text-rfg/80'
+                            >
+                              {tool}
+                              {index < tools.length - 1 && (
+                                <span className='mx-1 text-rfg/50'>|</span>
+                              )}
+                            </span>
+                          ))}
+                        </div>
+                        <Popover.Arrow className=' fill-rbg/40' />
+                      </Popover.Content>
+                    </Popover.Portal>
+                  </Popover.Root>
                 ))}
               </div>
             </div>

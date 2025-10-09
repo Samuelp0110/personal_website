@@ -13,16 +13,17 @@ import { Link } from "react-router";
 
 const Home: FC = () => {
   return (
-    <main className='w-full flex flex-col items-center justify-center font-roboto'>
+    <main className='w-full flex flex-col items-center justify-center font-roboto my-20'>
       {/* <Suspense fallback={null}>
         <TripleRay />
       </Suspense> */}
       {/* Content Section */}
       {/* <HeroSection /> */}
 
-      <section className='my-20'>
+      <section className=''>
         <h1 className='font-cormorant font-bold text-4xl text-rprimary text-center md:text-6xl'>
-          Analytical Thinker <br /> Software Developer <br /> Community Leader
+          Analytical Thinker. <br /> Software Developer. <br /> Community
+          Leader.
         </h1>
         <h2 className='my-8 text-center mx-4 font-semibold text-rprimary font-cormorant text-lg md:text-2xl'>
           Currently open to employment opportunities
