@@ -22,11 +22,10 @@ const Home: FC = () => {
 
       <section className=''>
         <h1 className='font-cormorant font-bold text-4xl text-rprimary text-center md:text-6xl'>
-          Analytical Thinker. <br /> Software Developer. <br /> Community
-          Leader.
+          Analytical Thinker <br /> Software Developer <br /> Community Leader
         </h1>
         <h2 className='my-8 text-center mx-4 font-semibold text-rprimary font-cormorant text-lg md:text-2xl'>
-          Currently open to employment opportunities
+          Actively Seeking Employment Opportunities
         </h2>
         <div className='mx-auto px-4 mt-16 grid grid-cols-1 font-cormorant md:grid-cols-2 gap-4 md:gap-8 max-w-5xl'>
           <Link to='/about'>
@@ -39,8 +38,8 @@ const Home: FC = () => {
               </h2>
               <p className='font-medium text-rfg/70 text-sm md:text-lg'>
                 I'm a creative thinker who loves to solve problems. I enjoy
-                seeing things from new perspectives and work to turn what I see
-                and learn into a usuable insight.
+                seeing things from new perspectives and working to turn what I
+                see and learn into a usuable insight.
               </p>
             </div>
           </Link>
@@ -53,9 +52,9 @@ const Home: FC = () => {
                 What I Have Done
               </h2>
               <p className='font-medium text-rfg/70 text-sm md:text-lg'>
-                A compilation of my past experiences and notable projects. From
-                being an IT Consultant as Samsung SDSA to building AI Agents for
-                clients, I strive to bring together a mix of modern technology
+                A compilation of my past experiences and notable projects: from
+                being an IT Consultant at Samsung SDSA to building AI Agents for
+                clients, my aim is to bring together a mix of modern technology
                 and business advancements.
               </p>
             </div>

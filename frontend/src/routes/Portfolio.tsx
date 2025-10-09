@@ -138,7 +138,7 @@ const ProjectsPage: FC = () => {
                   >
                     Amit Saha
                   </a>
-                  . I partook in multiple projects, which greatly expanded my
+                  . I took part in multiple projects, which greatly expanded my
                   knowledge in Generative AI and allowed me to have a
                   long-lasting impact on the organization.
                 </p>
@@ -156,7 +156,7 @@ const ProjectsPage: FC = () => {
                 </div>
                 <p className='mb-1 text-base font-normal text-rfg/60 gap-1'>
                   I was part of the Strategic Account Management team while at
-                  Samsung SDSA. Alongside the amazing team led by{" "}
+                  Samsung SDSA. Alongside the impressive team led by{" "}
                   <a
                     href='https://www.linkedin.com/in/yoonho-shin-718a83166/'
                     className='font-semibold'
@@ -196,9 +196,9 @@ const ProjectsPage: FC = () => {
                 </div>
 
                 <p className='mb-1 text-base font-normal text-rfg/60 gap-1'>
-                  The next key project I worked on was partaking in the design
+                  The next key project I worked on was the design
                   and pitch of a Loan Origination Process that would utilize
-                  Generative AI to bolster the clients capabilities.Through this
+                  Generative AI to bolster the client's capabilities. Through this
                   design we identified 8+ pain points where Generative AI Agents
                   could be used to simplify the process. My part in this was
                   building the map on Lucidchart and accompanying two team
@@ -221,15 +221,15 @@ const ProjectsPage: FC = () => {
                   Some other projects I worked on include an email triage system
                   that would improve ServiceNow's IT support ticket system,
                   ensuring all tickets are accounted for, including personal
-                  emails sent to an IT team members inbox, as well as a Proof of
-                  Concept for an organization wide AI powered business data
+                  emails sent to an IT team member's inbox, as well as a Proof of
+                  Concept for an organization-wide AI powered business data
                   serach system, made using Amazon Web Services technologies
                   such as Bedrock and S3, that worked for both structured and
                   unstructured data.
                 </p>
                 <p className='mb-10 text-base font-normal text-rfg/60 gap-1'>
                   The internship culminated into a final presentation, where I
-                  got to share with the SAM team and more all my contributions
+                  shared with the SAM team and more all my contributions
                   and activities while at Samsung SDSA. This experience has me
                   ready for any future endeavors in the AI and consulting
                   spaces.
@@ -362,10 +362,10 @@ const ProjectsPage: FC = () => {
                     target='_blank'
                   >
                     ADM Tronics
-                  </a>{" "}
-                  , all of my work fell under one of their ongoing projects at
-                  the time. This project involved devleping and experimenting on
-                  a clients medical device used for massage therapy.
+                  </a>
+                  , all of my work fell under one of their then current projects at
+                  the time. This project involved developing and experimenting on
+                  a client's medical device used for massage therapy.
                 </p>
                 <h3 className='block my-2 text-lg font-semibold leading-none text-rfg/80'>
                   Key Contributions
@@ -376,7 +376,7 @@ const ProjectsPage: FC = () => {
                       <MoveRight size={16} />
                     </span>
                     <a>
-                      Basic C++ development for the devices functionality, such
+                      Basic C++ development for the device's functionality, such
                       as vibration frequency and human interactity
                     </a>
                   </li>
@@ -385,7 +385,7 @@ const ProjectsPage: FC = () => {
                       <MoveRight size={16} />
                     </span>
                     <a>
-                      Experimented on the devices materials to ensure its
+                      Experimented on the device's materials to ensure its
                       durability in an everyday household, such as interactions
                       with various liquids and cleaning materials
                     </a>

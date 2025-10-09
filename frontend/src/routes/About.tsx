@@ -45,14 +45,14 @@ const photos = [
     imageSrc: aboutRocco,
     imageAlt: "Award Photo",
     description:
-      "I strive to recognize those who have excelled in their area, which is why I was able to grant my friend a certificate of appreciation formally for his first year as a professor ",
+      "I am always keen to recognize those who have excelled in their area, which is why I was able to grant my friend a certificate of appreciation formally for his first year as a professor ",
   },
   {
     title: "Cooking a Lot",
     imageSrc: aboutCooking,
     imageAlt: "Shakshuka Photo",
     description:
-      "I love to cook all types of food. Shown here is my attempt at making Shakshuka",
+      "I love to cook all types of food. Shown here is my attempt at Shakshuka",
   },
 ];
 
@@ -142,7 +142,7 @@ const About: FC = () => {
             </div>
             {/* Paragraph */}
             <div className='flex flex-col gap-2 text-rfg'>
-              I'm passionate about solving problems, it gives me the space to
+              I'm passionate about solving problems. It gives me the space to
               think creatively and keep learning every day. My curiosity drives
               me to explore new industries, uncover insights through analysis,
               and find smarter ways to use technology. What excites me most is
