@@ -6,7 +6,7 @@ import GenAI1 from "../positions/samsung_sdsa_tech_consulting_internship/images/
 import GenAI3 from "../positions/samsung_sdsa_tech_consulting_internship/images/3. NLP Final.png";
 import GenAI12_1 from "../positions/samsung_sdsa_tech_consulting_internship/images/12. Banking Final.png";
 import GenAI12_2 from "../positions/samsung_sdsa_tech_consulting_internship/images/12. Banking Final-2.png";
-import LoanOrigination from "../positions/samsung_sdsa_tech_consulting_internship/images/Loan Organization System.png";
+import LoanOrigination from "../positions/samsung_sdsa_tech_consulting_internship/images/Loan Origination.png";
 import { AspectRatio, Tabs } from "radix-ui";
 import { motion } from "framer-motion";
 import CountdownTimer from "../components/CountdownTimer";
