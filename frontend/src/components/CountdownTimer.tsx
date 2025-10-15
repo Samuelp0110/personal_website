@@ -2,9 +2,13 @@ import { useEffect, useState } from "react";
 
 interface CountdownTimerProps {
   targetDate: Date;
+  label?: string; // Optional label prop
 }
 
-const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
+const CountdownTimer: React.FC<CountdownTimerProps> = ({
+  targetDate,
+  label = "Launching In", // Default value
+}) => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   function calculateTimeLeft() {
@@ -41,7 +45,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
 
   return (
     <div className='text-center text-2xl font-semibold text-rprimary'>
-      Launching In:{" "}
+      {label}:{" "}
       <span className='font-mono text-rfg'>
         {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m{" "}
         {timeLeft.seconds}s

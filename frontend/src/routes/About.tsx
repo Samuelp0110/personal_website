@@ -240,53 +240,6 @@ const About: FC = () => {
         </div>
       </section>
 
-      {/* Bio Text Section */}
-      {/* <section className='px-18 py-15 flex justify-center'>
-        <div className='max-w-[1000px] flex flex-col gap-4 text-lg md:text-2xl text-center font-cormorant font-normal text-rfg'>
-          <p>
-            Hello there! I’m Sam Preston. I have a Master's of Computer Science
-            in Software Development (2025) and a Bachelor's of Science in
-            Business with concentrations in Computer Science and Information
-            Systems (2024) from{" "}
-            <a
-              href='https://www.stevens.edu/'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-rtertiary font-bold underline hover:text-rprimary transition-colors duration-300'
-            >
-              Stevens Institute of Technology
-            </a>{" "}
-            in Hoboken, NJ. I strive for creativity in anything I do, whether it
-            be creating a story with friends, developing new and interesting
-            software or learning new things.
-          </p>
-          <p>
-            While in college, I was a member of the Sigma Phi Epsilon
-            fraternity, holding multiple roles including being a challenge level
-            coordinator and a D&D DM. Thanks to my time as a business
-            undergraduate, I got to dip my toes into the world of
-            entrepreneurship as I worked on a startup idea called Fleco, a
-            nature-centric college marketplace designed to help keep old
-            furniture and items off the streets. We were happy to{" "}
-            <a
-              href='https://www.stevens.edu/news/ssb-students-showcase-expertise-at-innovation-expo-2024'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-rtertiary font-bold underline hover:text-rprimary transition-colors duration-300'
-            >
-              place second
-            </a>{" "}
-            in the SSB Students Showcase at the 2024 Innovation Expo.
-          </p>
-          <p>
-            Outside of my responsibilities and work, you will most likely find
-            me playing a game with friends, writing a book or cooking a good
-            meal. Recently, I’ve started to find myself more involved in the
-            world of 3D design, whether it be for printing or digital use.
-          </p>
-        </div>
-      </section> */}
-
       {/* Image Section */}
       <section className='w-full max-w-[1000px] px-6'>
         <div className='grid lg:grid-cols-2 gap-6 justify-items-center'>
