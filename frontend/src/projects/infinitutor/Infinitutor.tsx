@@ -1,4 +1,4 @@
-import { Database } from "lucide-react";
+import { Sparkle } from "lucide-react";
 import type { FC } from "react";
 import CountdownTimer from "../../components/CountdownTimer";
 
@@ -15,7 +15,7 @@ const InfiniTutorProject: FC = () => {
     <ol className='relative border-s border-rfg/40 pl-2'>
       <li className='flex flex-col mb-10 ms-6'>
         <span className='absolute flex items-center justify-center w-6 h-6 text-rfg bg-rneutral ring-8 ring-rneutral rounded-full -start-3 '>
-          <Database />
+          <Sparkle />
         </span>
         <h2 className='flex items-center mb-1 text-2xl font-semibold text-rfg'>
           Infini-Tutor

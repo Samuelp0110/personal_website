@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import HeroHeader from "../components/HeroHeader";
+import { Sparkle, BookOpen, Database, Book } from "lucide-react";
 import { Tabs } from "radix-ui";
 import { motion } from "framer-motion";
 import NYPDProject from "../projects/nypd_traffic_stops/NYPDProject";
@@ -78,6 +79,7 @@ const ProjectsPage: FC = () => {
                   value='nypd'
                   className='portfolio-project-tabs'
                 >
+                  <Database />
                   <h3 className='portfolio-project-tabs-header'>
                     NYPD Traffic Analysis
                   </h3>
@@ -86,12 +88,14 @@ const ProjectsPage: FC = () => {
                   value='my_website'
                   className='portfolio-project-tabs'
                 >
+                  <BookOpen />
                   <h3 className='portfolio-project-tabs-header'>My Website</h3>
                 </Tabs.Trigger>
                 <Tabs.Trigger
                   value='infinitutor'
                   className='portfolio-project-tabs'
                 >
+                  <Sparkle />
                   <h3 className='portfolio-project-tabs-header'>
                     Infini-Tutor
                   </h3>

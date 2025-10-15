@@ -37,7 +37,7 @@
   }
 /* Project Tabs: More flexible wrapping */
   .portfolio-project-tabs {
-    @apply w-full sm:w-auto max-w-[220px]
+    @apply w-full flex gap-x-2 sm:w-auto max-w-[260px]
           text-center px-3 py-2
           bg-rsecondary/80 rounded-xl cursor-pointer
           hover:bg-rprimary/10 duration-200 transition-colors
