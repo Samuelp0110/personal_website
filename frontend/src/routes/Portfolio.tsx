@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import HeroHeader from "../components/HeroHeader";
-import { Sparkle, BookOpen, Database, Book } from "lucide-react";
+import { Sparkle, BookOpen, Database } from "lucide-react";
 import { Tabs } from "radix-ui";
 import { motion } from "framer-motion";
 import NYPDProject from "../projects/nypd_traffic_stops/NYPDProject";
