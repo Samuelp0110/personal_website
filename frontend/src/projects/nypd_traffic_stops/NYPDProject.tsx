@@ -40,13 +40,21 @@ const NYPDProject: FC = () => {
           This analysis involves using the NYPD Open Data Set for their traffic
           stops between the dates of January 1st 2023 to June 30th 2025. It
           involved creating an in-depth exploratory dashboard for the data,
-          along with making Machine Learning backed predicitons to test the
+          along with making Machine Learning backed predictions to test the
           predictability of a traffic stop resulting in an arrest.
+        </p>
+        <h3 className='block my-2 text-md font-semibold leading-none text-rfg/80'>
+          Business Value
+        </h3>
+        <p className='mb-1 text-base font-normal text-rfg/80 gap-1'>
+          The goal of this analysis was to transform statistical outcomes into
+          actionable insights that could inform public policy decisions and
+          improve law enforcement training practices.
         </p>
         <h3 className='block my-2 text-md font-semibold leading-none text-rfg/80'>
           Key Skills Developed & Used
         </h3>
-        <div className='flex flex-wrap '>
+        <div className='flex flex-wrap'>
           {nypdSkills.map(({ skill }) => (
             <div className='flex px-3 bg-rtertiary  my-1 mr-2 rounded-full shadow-[0_0px_2px] shadow-rtertiary transition-transform duration-150 hover:scale-[1.05] cursor-default'>
               <a className='text-rbg text-sm'>{skill}</a>
@@ -76,14 +84,14 @@ const NYPDProject: FC = () => {
           funny, right?). But seriously, it is one of the most universal truths
           of the modern day. Reckless driving, drunk driving, tired driving,
           even just normal safe driving, can result in being pulled over. As I
-          thought about it more, I wondered, are these stops predicatable?
+          thought about it more, I wondered, are these stops predictable?
         </p>
         <p className='mb-2 text-base font-normal text-rfg/60 gap-1'>
           Well, who better than I, someone who has never been pulled over, to do
           some research. My first order of business was to choose a location to
           analyze. After all, the data can be vastly different depending on the
           region. Being from New York and currently living just across the
-          hudson, I thought New York City would be the best option. Luckily,
+          Hudson, I thought New York City would be the best option. Luckily,
           almost all data related to NYC operations is available online on the{" "}
           <a
             href='https://opendata.cityofnewyork.us/'
@@ -102,15 +110,15 @@ const NYPDProject: FC = () => {
           </a>{" "}
           and contains 19 distinct features defining traffic stops in the city.
           While this was good, one feature of the data includes the command code
-          of the officer conducting the stop (a code designating which precint
-          and officer belongs to) which on its own was rather un-informative, so
+          of the officer conducting the stop (a code designating which precinct
+          and officer belongs to) which on its own was rather uninformative, so
           I included another{" "}
           <a
             href='https://www.nyc.gov/site/nypd/bureaus/patrol/precincts-landing.page'
             className='font-semibold text-rprimary hover:text-rprimary/50 duration-200 transition-colors underline'
             target='_blank'
           >
-            set of data covering precint information
+            set of data covering precinct information
           </a>
           . Once i had all my data together, it was time to get started.
         </p>
@@ -122,8 +130,8 @@ const NYPDProject: FC = () => {
           a story I wanted to tell. The story starts with what are the facts
           surrounding a traffic stop (the context some might say) such as a
           <span className='font-bold'>
-            driver's sex, age, race, vehicle typem, stop date / time, precint
-            area and if it was a checkpoint stop or not
+            driver's sex, age, race, vehicle type, stop date/time, precinct area
+            and if it was a checkpoint stop or not
           </span>
           . As this information is all determined before the first interaction
           between an officer and driver, it seemed right to separate it from the
@@ -137,14 +145,14 @@ const NYPDProject: FC = () => {
         </p>
 
         <p className='mb-2 text-base font-normal text-rfg/60 gap-1'>
-          Going from here, i designed the dashboard to have a few key features.
+          Going from here, I designed the dashboard to have a few key features.
           First, it has to have three pages, one for general info, one for
           context based data and one for outcome based data. Secondly, Every
-          page had to have the ability to sort by city borough, precinct and
+          page has to include the ability to sort by city borough, precinct and
           date range. By doing this, every page's visuals could be narrowed down
-          to a specific time and place. I could easily go into the details of
-          every visual, but why do that when the dashboard is here for you, the
-          reader, to interact with.
+          to a specific time and place. Rather than detailing each chart here,
+          the interactive dashboard below allows viewers to explore the data and
+          derive insights firsthand.
         </p>
         <h3 className='block my-2 text-lg font-semibold leading-none text-rfg/80'>
           Some basic information before you start is:
@@ -264,9 +272,9 @@ const NYPDProject: FC = () => {
           predictions. Now, as a disclaimer, going into this I firmly believed
           there would be no possibility of predicting if an arrest would be made
           or not by contextual information alone, and had little confidence that
-          including other outcome variables would make a difference. Neverless,
-          I wanted to try, cause even a failure to predict holds valuable
-          insights.
+          including other outcome variables would make a difference.
+          Nevertheless, I wanted to try, cause even a failure to predict holds
+          valuable insights.
         </p>
         <p className='mb-2 text-base font-normal text-rfg/60 gap-1'>
           I used three different models in two separate pipelines for an A/B
@@ -323,14 +331,16 @@ const NYPDProject: FC = () => {
                       Contextual Model
                     </h3>
                     <p className='text-base font-normal text-rbg/60'>
-                      This model had difficulty making accurate arrest
-                      predictions. While it predicted "no arrest" cases well, it
-                      struggled to correctly identify actual arrests. It only
-                      predicted arrest correctly about 7% of the time and
-                      overall accuracy landed at 66%. The model shows that
-                      context alone isn’t enough to make strong predictions.
-                      Still, its high recall for arrests (73%) suggests it
-                      flagged many potential cases — just not very precisely.
+                      When relying only on context available before or during a
+                      stop—such as location, time, and driver demographics—the
+                      model showed that these factors alone offer limited power
+                      for anticipating arrest outcomes. From a business and
+                      policy standpoint, this means external circumstances may
+                      help describe where and when incidents occur, but not why
+                      they escalate. Context provides situational awareness, not
+                      behavioral prediction—indicating a need for more granular,
+                      human-interaction data to inform fair enforcement policies
+                      or predictive tools.
                     </p>
                   </div>
 
@@ -339,15 +349,15 @@ const NYPDProject: FC = () => {
                       Outcome Model
                     </h3>
                     <p className='text-base font-normal text-rbg/60'>
-                      When outcome variables were included, performance improved
-                      across the board. The model was better at predicting both
-                      arrests and non-arrests, and had much stronger balance
-                      between precision and recall. It correctly flagged 84% of
-                      actual arrests and had a noticeable bump in overall
-                      accuracy to 76%. While it’s not perfect, this shows how
-                      much of arrest prediction relies on what happens during
-                      the stop itself. Including outcomes adds important context
-                      the model otherwise misses.
+                      When outcomes such as searches or consent were added, the
+                      model’s interpretive power improved substantially. From an
+                      operational lens, this demonstrates that what happens
+                      during the interaction carries far more weight than static
+                      background details. The implication for leadership is
+                      clear: interventions aimed at reducing escalation or bias
+                      should focus on in-stop decision-making processes, officer
+                      behavior patterns, and procedural consistency rather than
+                      demographic profiling.
                     </p>
                   </div>
                 </div>
@@ -399,16 +409,15 @@ const NYPDProject: FC = () => {
                       Contextual Model
                     </h3>
                     <p className='text-base font-normal text-rbg/60'>
-                      The contextual random forest model faced similar
-                      challenges as the logistic regression one. While it
-                      handled “no arrest” cases well, it had trouble precisely
-                      identifying arrests, predicting them correctly only about
-                      7% of the time. Still, it managed to catch many arrest
-                      cases in its net, with a strong recall score of 76%. The
-                      overall accuracy came in at 65%, which means it got most
-                      predictions right, but struggled with balance. This
-                      suggests context alone doesn’t give the model enough
-                      information to make confident predictions about arrests.
+                      Using only contextual inputs, the model was able to
+                      identify broad behavioral trends but lacked precision in
+                      isolating meaningful arrest indicators. For analysts or
+                      policymakers, this suggests that relying on demographic or
+                      temporal data alone may reinforce surface-level insights
+                      without addressing the root causes of arrest
+                      discrepancies. The takeaway is that context explains
+                      activity, not outcome, and is best used for resource
+                      planning rather than predictive policing.
                     </p>
                   </div>
 
@@ -417,17 +426,15 @@ const NYPDProject: FC = () => {
                       Outcome Model
                     </h3>
                     <p className='text-base font-normal text-rbg/60'>
-                      Once outcome-based features were included, the model's
-                      performance improved noticeably. It became much better at
-                      identifying both arrest and non-arrest situations,
-                      boosting arrest prediction accuracy to 11% and increasing
-                      recall to 83%. Overall accuracy jumped to 77%, and the
-                      model showed better balance in how it weighed different
-                      types of cases. The improvement shows that much of the
-                      arrest decision appears to be influenced by events that
-                      happen during the stop. Adding these outcomes gives the
-                      model the extra clues it needs to make more accurate
-                      predictions.
+                      Incorporating event-level outcomes created a far more
+                      balanced and actionable model. From a strategic view, this
+                      highlights that decision dynamics during the stop—such as
+                      officer choices, consent requests, and searches—drive
+                      measurable differences in arrest probability. These
+                      insights can guide the design of targeted officer training
+                      programs, standardized response protocols, and post-stop
+                      evaluation frameworks to improve both efficiency and
+                      fairness.
                     </p>
                   </div>
                 </div>
@@ -478,14 +485,15 @@ const NYPDProject: FC = () => {
                       Contextual Model
                     </h3>
                     <p className='text-base font-normal text-rbg/60'>
-                      Even when using only contextual information, XGBoost
-                      showed strong overall performance. It predicted non-arrest
-                      cases with high accuracy and reached 93% accuracy overall.
-                      However, it still had difficulty correctly identifying
-                      arrest cases, with only 13% precision and 19% recall. This
-                      again highlights the challenge of making predictions based
-                      purely on context. The model did its best, but lacked the
-                      full picture needed for reliable arrest predictions.
+                      Even at its most advanced, a purely contextual model could
+                      only approximate trends rather than explain outcomes. For
+                      decision-makers, this reinforces that environmental and
+                      demographic factors—while useful for understanding
+                      exposure risk—cannot substitute for behavioral or
+                      procedural insight. Business value here lies in
+                      understanding operational pressure points (times,
+                      locations, demographics) that may warrant better staffing
+                      or preventive community initiatives.
                     </p>
                   </div>
 
@@ -494,15 +502,15 @@ const NYPDProject: FC = () => {
                       Outcome Model
                     </h3>
                     <p className='text-base font-normal text-rbg/60'>
-                      With outcome variables included, XGBoost performed
-                      noticeably better. It achieved 92% overall accuracy and
-                      was significantly more successful at spotting arrest
-                      cases, with 21% precision and 56% recall. The model became
-                      more balanced, meaning it wasn’t overly biased toward one
-                      outcome. This improvement shows that what happens during a
-                      stop (like searches or use of force) plays a big role in
-                      predicting arrests. When that extra context is available,
-                      the model can make much more informed predictions.
+                      When event-driven features were added, the model delivered
+                      a more comprehensive and realistic view of arrest
+                      dynamics. From a management perspective, this demonstrates
+                      that policy impact is observable once process-level
+                      variables are measured. In practice, integrating this type
+                      of modeling could support internal audits, help
+                      departments evaluate training effectiveness, and provide
+                      evidence-based guidance for procedural reforms aimed at
+                      consistency and equity.
                     </p>
                   </div>
                 </div>
@@ -515,7 +523,7 @@ const NYPDProject: FC = () => {
           Conclusion
         </h2>
         <p className='mb-2 text-base font-normal text-rfg/60 gap-1'>
-          To bring everything together, I relfected on both the technical
+          To bring everything together, I reflected on both the technical
           results and their broader implications. I chose these three models
           because they each offer different strengths that fit the nature of
           this dataset. The data contains a mix of simple details like age and
@@ -538,7 +546,7 @@ const NYPDProject: FC = () => {
         <p className='mb-2 text-base font-normal text-rfg/60 gap-1'>
           I think the best way to phrase the final conclusion is that police
           interactions are a black box. Every situation is unique and there is
-          no way to predict an outcome. The officers mindset and ideas, mixed
+          no way to predict an outcome. The officer's mindset and ideas, mixed
           with their interactions with the driver, make every situation chaotic
           and random.
         </p>
@@ -546,19 +554,54 @@ const NYPDProject: FC = () => {
           My Recommendations
         </h3>
         <p className='mb-2 text-base font-normal text-rfg/60 gap-1'>
-          Using this data, it leads to some recommendations that can be made.
-          First, it emphasizes the need for intense training for all police
-          officers. Since all interactions are dependant on the officers own
-          morals and mindset, it is crucial they are all are on the same page
-          when it comes how to deal with a situation. Second, based on the
-          initial analysis, bias is evident in the NYPD's interactions at
-          traffic stops regarding race. This could warrant an investigation into
-          widespread bias or paranoia that needs to be corrected. Lastly, there
-          is evidential bias to seize two-wheel vehicles, meaning similarly to
-          the racial discrepancy, there could be cause for an investigation.
+          From this data, several actionable recommendations emerge:
         </p>
+        <ol>
+          <li className='flex gap-1 pb-1 text-rfg/60'>
+            <span className='text-rprimary pt-1'>
+              <MoveRight size={16} />
+            </span>
+
+            <a>
+              <span className='font-semibold text-rfg/80'>
+                Standardize training:{" "}
+              </span>
+              There is an overall arrest rate 3x higher for hispanics and black
+              people than any other race, indicating either bias or some other
+              factor influencing decisions
+            </a>
+          </li>
+          <li className='flex gap-1 pb-1 text-rfg/60'>
+            <span className='text-rprimary pt-1'>
+              <MoveRight size={16} />
+            </span>
+
+            <a>
+              <span className='font-semibold text-rfg/80'>
+                Audit bias trends:{" "}
+              </span>
+              The analysis highlights racial and demographic discrepancies,
+              suggesting the need for deeper bias audits and behavioral data
+              reviews.
+            </a>
+          </li>
+          <li className='flex gap-1 pb-1 text-rfg/60'>
+            <span className='text-rprimary pt-1'>
+              <MoveRight size={16} />
+            </span>
+
+            <a>
+              <span className='font-semibold text-rfg/80'>
+                Review seizure practices:{" "}
+              </span>
+              Elevated seizure rates for two-wheel vehicles indicate potential
+              process bias that warrants procedural review and policy alignment.
+            </a>
+          </li>
+        </ol>
+
         <p className='mb-2 text-base font-normal text-rfg/60 gap-1'>
-          I Hope you enjoyed my analysis of NYPD's Vehicle Stops of the past 2
+          I hope you enjoyed my analysis of NYPD's Vehicle Stops of the past 2
           years or so. Feel free to contact me with any questions or comments
           about it!
         </p>
