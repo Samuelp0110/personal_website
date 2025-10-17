@@ -42,7 +42,7 @@ const ClassificationMetrics: FC<ClassificationMetricProps> = ({
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className='fixed inset-0 bg-rfg/20 data-[state=open]:animate-overlayShow' />
-        <Dialog.Content className='fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl font-roboto bg-rtertiary shadow-[0_2px_10px] shadow-rfg p-4 mx-auto max-w-[500px] animate-fadeIn'>
+        <Dialog.Content className='fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl font-roboto bg-rtertiary shadow-[0_2px_10px] shadow-rfg w-[90vw] sm:w-[500px] p-6 sm:p-8 animate-fadeIn'>
           <h1 className='text-center text-rbg/90 mb-2'>{model}</h1>
 
           <div className='grid grid-cols-2 gap-4 text-sm text-rbg/70'>

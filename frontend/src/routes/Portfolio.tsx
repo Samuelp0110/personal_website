@@ -50,7 +50,7 @@ const ProjectsPage: FC = () => {
               duration: 0.5,
               ease: "easeOut",
             }}
-            className='w-full max-w-[1000px] mx-auto bg-rneutral py-7 shadow-[0_2px_10px] shadow-rprimary/50 rounded-3xl mb-20 px-4 sm:px-6 md:px-10'
+            className='w-full max-w-[1000px] mx-auto bg-rneutral py-7 shadow-[0_2px_10px] shadow-rprimary/50 rounded-3xl mb-20 px-4 sm:px-8 md:px-10'
           >
             {/* All Positional Information */}
             <ol className='relative border-s border-rfg/40'>
