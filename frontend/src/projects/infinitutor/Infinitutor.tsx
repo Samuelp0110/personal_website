@@ -36,7 +36,7 @@ const InfiniTutorProject: FC = () => {
         'classroom'. In one part of the classroom, a teacher will interact with
         it to construct assignments, homeworks, plan out lessons and more for a
         class. As they do this, the 'classroom' will learn, enabling it to
-        provice the students in the classroom with better tutoring, as it will
+        provide the students in the classroom with better tutoring, as it will
         have learned more about what concepts to focus on from its interactions
         with the teacher. On the other side, as the students use the 'classroom'
         to study and learn more, the classroom will pick up on what areas of the

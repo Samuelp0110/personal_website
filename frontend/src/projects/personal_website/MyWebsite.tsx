@@ -51,7 +51,7 @@ const MyWebsite: FC = () => {
         me, such as my interests, hobbies, past experience and more. It will
         also be able to answer any questions you have about more technical terms
         on my website, such as the terminology in the NYPD Traffic Analysis
-        project. Look forward to meeting to not an AI version of me, but what
+        project. Look forward to meeting not an AI version of me, but what
         will be more of an AI wikipedia of my life.
       </p>
 
