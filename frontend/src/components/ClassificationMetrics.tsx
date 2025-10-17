@@ -37,12 +37,12 @@ const ClassificationMetrics: FC<ClassificationMetricProps> = ({
     <Dialog.Root>
       <Dialog.Trigger asChild>
         <h3 className='flex my-2 font-semibold leading-none text-rbg/80 cursor-pointer underline underline-offset-4 hover:text-rsecondary transition-colors'>
-          <Box /> <span className='pt-1 pl-1 '>Metrics</span>
+          <Box /> <span className='pt-1 pl-1'>Metrics</span>
         </h3>
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className='fixed inset-0 bg-rfg/20 data-[state=open]:animate-overlayShow' />
-        <Dialog.Content className='fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl font-roboto bg-rtertiary shadow-[0_2px_10px] shadow-rtertiary p-4 mx-auto max-w-[350px] animate-fadeIn'>
+        <Dialog.Content className='fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl font-roboto bg-rtertiary shadow-[0_2px_10px] shadow-rfg p-4 mx-auto max-w-[500px] animate-fadeIn'>
           <h1 className='text-center text-rbg/90 mb-2'>{model}</h1>
 
           <div className='grid grid-cols-2 gap-4 text-sm text-rbg/70'>
