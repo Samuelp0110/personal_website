@@ -118,7 +118,7 @@ const tags = [
 
 const About: FC = () => {
   return (
-    <main className='w-full min-h-screen flex flex-col items-center mb-12'>
+    <div className='w-full min-h-screen flex flex-col items-center mb-12'>
       {/* Hero Section */}
       <HeroHeader title='Creative. Inquisitive. Analytical' />
       <section className='max-w-[1000px] flex flex-col justify-center my-4 mb-10 mx-2'>
@@ -254,7 +254,7 @@ const About: FC = () => {
           ))}
         </div>
       </section>
-    </main>
+    </div>
   );
 };
 

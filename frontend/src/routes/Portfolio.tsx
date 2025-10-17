@@ -12,7 +12,7 @@ import InfiniTutorProject from "../projects/infinitutor/Infinitutor";
 
 const ProjectsPage: FC = () => {
   return (
-    <main className='w-full min-h-screen flex flex-col items-center mb-12'>
+    <section className='w-full min-h-screen flex flex-col items-center mb-12'>
       {/* Hero Banner */}
       <HeroHeader title='My Portfolio' />
       <Tabs.Root
@@ -117,7 +117,7 @@ const ProjectsPage: FC = () => {
           </motion.section>
         </Tabs.Content>
       </Tabs.Root>
-    </main>
+    </section>
   );
 };
 
