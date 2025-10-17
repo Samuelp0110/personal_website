@@ -12,7 +12,7 @@ import CountdownTimer from "../../components/CountdownTimer";
 
 const InfiniTutorProject: FC = () => {
   return (
-    <div className='flex flex-col mb-10 ms-6'>
+    <div className='flex flex-col mb-10'>
       <div className='flex flex-row flex-wrap'>
         <span className='flex items-center justify-center w-6 h-6 pt-2 mr-2 text-rfg '>
           <Sparkle />
