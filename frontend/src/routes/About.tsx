@@ -93,7 +93,7 @@ const services = [
 const callOuts = [
   { main: "4+", sub: "Years of Experience" },
   { main: "15+", sub: "Projects Completed" },
-  { main: "5+", sub: "Happy Clients" },
+  { main: "3", sub: "Internships" },
   { main: "2", sub: "Degrees Earned" },
 ];
 
