@@ -51,8 +51,8 @@ const MyWebsite: FC = () => {
         me, such as my interests, hobbies, past experience and more. It will
         also be able to answer any questions you have about more technical terms
         on my website, such as the terminology in the NYPD Traffic Analysis
-        project. Look forward to meeting not an AI version of me, but what
-        will be more of an AI wikipedia of my life.
+        project. Look forward to meeting not an AI version of me, but what will
+        be more of an AI wikipedia of my life.
       </p>
 
       <h3 className='block my-2 text-md font-semibold leading-none text-rfg/80'>
@@ -78,10 +78,6 @@ const MyWebsite: FC = () => {
 
       {/* Temporary Countdown */}
       <div className='w-full mt-20 flex flex-col gap-y-10'>
-        <CountdownTimer
-          targetDate={new Date("2025-10-21")}
-          label='In-Depth Description In'
-        />
         <CountdownTimer
           targetDate={new Date("2025-11-25")}
           label='Agent Of Sam In'
