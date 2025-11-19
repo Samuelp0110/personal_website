@@ -138,7 +138,7 @@ const ProjectsPage: FC = () => {
                   <BookOpen />
                   <h3 className='portfolio-project-tabs-header'>My Website</h3>
                 </Tabs.Trigger>
-                <Tabs.Trigger
+                {/* <Tabs.Trigger
                   value='infinitutor'
                   className='portfolio-project-tabs'
                 >
@@ -146,7 +146,7 @@ const ProjectsPage: FC = () => {
                   <h3 className='portfolio-project-tabs-header'>
                     Infini-Tutor
                   </h3>
-                </Tabs.Trigger>
+                </Tabs.Trigger> */}
               </Tabs.List>
               {/* NYPD Project Content */}
               <Tabs.Content value='nypd'>
