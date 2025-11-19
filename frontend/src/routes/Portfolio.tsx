@@ -1,6 +1,6 @@
 import { type FC, useEffect } from "react";
 import HeroHeader from "../components/HeroHeader";
-import { Sparkle, BookOpen, Database } from "lucide-react";
+import { BookOpen, Database } from "lucide-react";
 import { Tabs } from "radix-ui";
 import { motion } from "framer-motion";
 import { useSearchParams } from "react-router";
